@@ -18,6 +18,11 @@ module.exports = {
         primarylight: "#00a862",
 				secondary: "#26272b",
 			},
+      backgroundImage: {
+        'categories': "url('/background-Images/categories-bg.jpg')",
+        'contact': "url('/background-Images/contact-bg.jpg')",
+        'home': "url('/background-Images/home-bg.jpg')",
+      },
 		},
 	},
 	plugins: [],
