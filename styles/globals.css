@@ -1,26 +1,89 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+@layer base {
   body {
-    color: white;
-    background: black;
+    @apply px-5;
+  }
+  .section {
+    @apply py-10;
+  }
+
+  /* Headings */
+  h1 {
+    @apply text-[38px] leading-[44px] font-semibold text-black font-sans;
+  }
+  h2 {
+    @apply text-[31px] leading-[36px] font-semibold text-black font-sans;
+  }
+  h3 {
+    @apply text-[24px] leading-[30px] font-semibold text-black font-sans;
+  }
+  h4 {
+    @apply text-[17px] leading-[24px] font-semibold text-black font-sans;
+  }
+  h5 {
+    @apply text-[14px] leading-[20px] font-semibold text-black font-sans;
+  }
+  h6 {
+    @apply text-[12px] leading-[18px] font-bold text-black font-sans;
+  }
+
+  /* Display Styles: styled headings */
+  .display-1 {
+    @apply text-[68px] leading-[75px] font-semibold text-black font-sans;
+  }
+  .display-2 {
+    @apply text-[43px] leading-[52px] font-semibold text-black font-sans;
+  }
+  .display-3 {
+    @apply text-[19px] leading-[19px] font-semibold text-black font-sans;
+  }
+  
+
+  /* Paragraph Styles  */
+  p {
+    @apply text-[17px] leading-[22px] font-medium text-[#6e6e6e] font-sans;
+  }
+  .p-lg {
+    @apply text-[24px] leading-[32px] font-medium text-[#6e6e6e] font-sans;
+  }
+  .p-italic {
+    @apply text-[24px] leading-[32px] font-medium text-[#6e6e6e] font-sans italic;
+  }
+  .p-bold {
+    @apply text-[24px] leading-[32px] font-bold text-[#6e6e6e] font-sans;
+  }
+  .p-gray {
+    @apply text-[17px] leading-[22px] font-medium text-[#8f8f8f] font-sans;
+  }
+  .p-white {
+    @apply text-[24px] leading-[32px] font-medium text-white font-sans;
+  }
+
+  /* Link styles */
+  .link-sm {
+    @apply text-[14px] leading-[20px] font-semibold text-[#26272b] font-sans;
+  }
+  .link-lg {
+    @apply text-[20px] leading-[20px] font-semibold text-[#26272b] font-sans;
+  }
+  .link-body {
+    @apply text-[14px] leading-[20px] font-medium text-[#26272b] font-sans;
+  }
+
+  /* List styles */
+  ol, ul {
+    @apply list-inside text-[15px] leading-[20px] font-medium text-[#6e6e6e] font-sans;
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply inline-block px-6 py-4 text-[17px] font-semibold leading-[20px] text-center text-white transition-all duration-300  bg-primary rounded-sm hover:bg-primarylight;
+  }
+  .btn-secondary {
+    @apply inline-block px-6 py-3 text-[17px] font-semibold leading-[20px] text-center text-secondary hover:text-white transition-all duration-75  bg-white border-gray-200 border-2 rounded-md hover:bg-primary;
   }
 }
