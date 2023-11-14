@@ -19,7 +19,10 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <main className={`${inter.variable} font-sans`}>
         <Layout>
+        <div className='mt-20'>
         <Component {...pageProps} />
+
+        </div>
 
         </Layout>
       </main>

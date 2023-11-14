@@ -24,10 +24,10 @@ export const fadeIn = (direction,duration ,delay) => {
     },
   }};
   
-export const flipX = () => {
+export const slideX = () => {
   return {
-    offscreen: { opacity: 0, scaleX: 0 },
-    onscreen: {
+    off_hover: { opacity: 0, scaleX: 0 },
+    on_hover: {
       opacity: 1,
       scaleX: 1,
       transition: {
