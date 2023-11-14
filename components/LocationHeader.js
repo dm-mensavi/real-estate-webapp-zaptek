@@ -1,6 +1,5 @@
-import React from 'react'
 
-function LocationHeader() {
+const LocationHeader = () => {
   return (
     <div>LocationHeader</div>
   )

@@ -1,6 +1,5 @@
-import React from 'react'
 
-function Newsletter() {
+const Newsletter = () => {
   return (
     <div>Newsletter</div>
   )

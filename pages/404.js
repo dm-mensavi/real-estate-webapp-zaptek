@@ -1,6 +1,5 @@
-import React from 'react'
 
-function PageNotFound() {
+function PageNotFound () {
   return (
     <div>PageNotFound</div>
   )

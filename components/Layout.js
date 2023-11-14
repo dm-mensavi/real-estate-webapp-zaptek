@@ -1,9 +1,8 @@
-import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Newsletter from "./Newsletter";
 
-function Layout({ children }) {
+const Layout = ({ children }) => {
 	return (
 		<div>
 			<Navbar />
@@ -12,6 +11,6 @@ function Layout({ children }) {
 			<Footer />
 		</div>
 	);
-}
+};
 
 export default Layout;

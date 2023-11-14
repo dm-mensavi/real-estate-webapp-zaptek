@@ -1,6 +1,5 @@
-import React from 'react'
 
-function Header({title, description, image, children}) {
+const Header =({title, description, image, children}) => {
   return (
     <div className={`bg-${image} `}>
       <div className=''>
