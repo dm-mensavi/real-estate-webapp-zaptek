@@ -4,6 +4,7 @@ import blog2 from '../../public/blog-2.jpg'
 function Blog() {
   return (
     <div>
+      <div className="general-margin">
       <h1 className="text-red-600 text-center">Blog</h1>
       <div className="flex sm:flex-col lg:flex-col xl:flex-col sm:gap-6 sm:pl-32 sm:pr-32 items-center sm:pt-20 lg:w-[1100px]">
       <button className="h-10 w-40 border-2 rounded-3xl border-primary">
@@ -13,21 +14,24 @@ function Blog() {
       </button>
         <h1 className="text-primary font-bold text-5xl text-center">Top trends shaping the future of luxury Real Estate</h1>
       </div>
-      <div>
-        <Image src={blog2} alt=""/>
-        <p>The rich text element allows you to create and format headings, paragraphs, block-quotes, images, and video all in one place instead of having to add and format them individually. Just double-click and easily create content.</p>
-        <p>For dynamic content, add a rich text field to any collection and then connect a rich text element to that field in the settings panel. Headings, paragraphs, block-quotes, figures, images, and figure captions can all be styled.</p>
-        <h4>We love design beautiful things.</h4>
-        <p>Headings, paragraphs, blockquotes, figures, images, and figure captions can all be styled after a class is added to the rich text element using the <q>When inside of</q> nested selector system. A rich text element can be used with static or dynamic content. For static content, just drop it into any page and begin editing.</p>
-        <h4 className="border-l">A rich text element can be used with static or dynamic content. For static content, just drop it into any page and begin editing.</h4>
-        <p>The rich text element allows you to create and format headings, paragraphs, blockquotes, images, and video all in one place instead of having to add and format them individually. Just double-click and easily create content.</p>
-        <h4>How to customize formatting for each rich text.</h4>
-        <p>The rich text element allows you to create and format headings, paragraphs, blockquotes, images, and video all in one place instead of having to add and format them individually. A rich text element can be used with static or dynamic content. For static content, just drop it into any page and begin editing. For dynamic content, add a rich text field to any collection and then connect a rich text element to that field in the settings panel. Voila!</p>
-        <div className="pt-12">
-          <button className="text-primary border-b-2 border-primary">Back to Blog</button>
+      <div className="pt-20">
+        <Image src={blog2} alt="" className="rounded-xl"/>
+        <p className="pt-10">The rich text element allows you to create and format headings, paragraphs, block-quotes, images, and video all in one place instead of having to add and format them individually. Just double-click and easily create content.</p>
+        <p className="pt-4">For dynamic content, add a rich text field to any collection and then connect a rich text element to that field in the settings panel. Headings, paragraphs, block-quotes, figures, images, and figure captions can all be styled.</p>
+        <h3 className="pt-6">We love design beautiful things.</h3>
+        <p className="pt-6">Headings, paragraphs, blockquotes, figures, images, and figure captions can all be styled after a class is added to the rich text element using the <q>When inside of</q> nested selector system. A rich text element can be used with static or dynamic content. For static content, just drop it into any page and begin editing.</p>
+       <div className="border-l-2 pl-8 border-primary mt-6 mb-6 pl-14 pr-14">
+       <h2 className="font-semibold">A rich text element can be used with static or dynamic content. For static content, just drop it into any page and begin editing.</h2>
+       </div>
+        <p className="pt-6">The rich text element allows you to create and format headings, paragraphs, blockquotes, images, and video all in one place instead of having to add and format them individually. Just double-click and easily create content.</p>
+        <h3 className="pt-4">How to customize formatting for each rich text.</h3>
+        <p className="pt-6">The rich text element allows you to create and format headings, paragraphs, blockquotes, images, and video all in one place instead of having to add and format them individually. A rich text element can be used with static or dynamic content. For static content, just drop it into any page and begin editing. For dynamic content, add a rich text field to any collection and then connect a rich text element to that field in the settings panel. Voila!</p>
+        <div className="pt-8 pb-20">
+          <button className="text-primary border-b-2 border-[#BAE7D4]">Back to Blog</button>
           </div>
       </div>
-      <div className="flex flex-col gap-6 bg-gray-100 pb-36">
+      </div>
+      <div className="flex flex-col gap-6 bg-gray-100 pb-36 general-margin">
       <div className="pt-40 flex  items-center flex-col">
           <button className="h-10 w-40 border-2 rounded-3xl border-primary">
         <ul className="list-disc">
@@ -51,7 +55,7 @@ function Blog() {
           <h3 className="text-black pt-8">{blogs.title} </h3>
           </div>
           <div className="pt-12">
-          <button className="text-primary border-b-2 border-primary">Read More</button>
+          <button className="text-primary border-b-2 border-[#BAE7D4]">Read More</button>
           </div>
          </div>
         ))}

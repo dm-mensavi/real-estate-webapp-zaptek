@@ -86,4 +86,9 @@
   .btn-secondary {
     @apply inline-block px-6 py-3 text-[17px] font-semibold leading-[20px] text-center text-secondary hover:text-white transition-all duration-75  bg-white border-gray-200 border-2 rounded-md hover:bg-primary;
   }
+
+  /* General margin */
+  .general-margin {
+    @apply px-4	sm:px-10 lg:px-20 xl:px-28 2xl:px-[10%];
+  }
 }
