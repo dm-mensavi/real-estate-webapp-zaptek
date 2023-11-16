@@ -4,7 +4,7 @@ import { FiSearch } from "react-icons/fi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import {MdOutlineKeyboardArrowDown} from 'react-icons/md'
 import Underline from "./Underline";
-import CategoriesDropdown from "./CategoriesDropdown";
+import CategoriesDropdown from "./CategoriesDropdown.js";
 
 const Navbar = () => {
 	return (
@@ -15,7 +15,9 @@ const Navbar = () => {
 						<Image src="/icons/logo.png" width={120} height={120} alt="Logo" />
 					</div>
 				</Link>
-				<div className="hidden lg:flex items-center justify-start space-x-5">
+
+				{/* Hidden component on mobile */}
+				<div className="hidden lg:flex items-center justify-start space-x-5"> 
 					<Link href="/">
 						<div className="nav-link">Home</div>
 					</Link>

@@ -11,7 +11,7 @@ const CategoryLink = ({ name, to, width }) => {
 					className="relative group"
 					onMouseEnter={() => setIsHovered(true)}
 					onMouseLeave={() => setIsHovered(false)}>
-					<p>{name}</p>
+					<p className="nav-link">{name}</p>
 					<p
 						className={`w-[${width}}px] mt-1 relative bg-primarylight/40 h-[3px] overflow-hidden group`}>
 						<div
