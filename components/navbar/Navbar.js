@@ -20,11 +20,13 @@ const Navbar = () => {
 						<div className="nav-link">Home</div>
 					</Link>
 					<Link href="/properties/categoryName" className="group">
-						<div className="nav-link flex items-center">
+						<div className="nav-link flex items-center pt-3">
 							<div>Categories</div>
 							<div className="group-hover:rotate-180 transition-all duration-300 ease-in-out"><MdOutlineKeyboardArrowDown /></div>
 						</div>
+						<div className="group h-[10px]">
 						<CategoriesDropdown />
+						</div>
 					</Link>
 					<Link href="/packages">
 						<div className="nav-link">Packages</div>
