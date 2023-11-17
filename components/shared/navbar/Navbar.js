@@ -1,15 +1,29 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { RxHamburgerMenu } from "react-icons/rx";
-import {MdOutlineKeyboardArrowDown} from 'react-icons/md'
+import { HiX } from "react-icons/hi";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import Underline from "./Underline";
 import CategoriesDropdown from "./CategoriesDropdown.js";
+import MobileNav from "./MobileNav.js";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
 	return (
+		<>
 		<nav className="fixed top-0 left-0 right-0 h-20 bg-white p-4 flex items-center justify-between z-50 px-4	sm:px-10 lg:px-20 xl:px-28 2xl:px-[10%]">
-			<div className="flex items-center justify-start space-x-5">
+			<div className="flex items-center justify-start space-x-5 z-40">
 				<Link href="/">
 					<div className="mr-4 cursor-pointer">
 						<Image src="/icons/logo.png" width={120} height={120} alt="Logo" />
@@ -17,17 +31,19 @@ const Navbar = () => {
 				</Link>
 
 				{/* Hidden component on mobile */}
-				<div className="hidden lg:flex items-center justify-start space-x-5"> 
+				<div className="hidden lg:flex items-center justify-start space-x-5">
 					<Link href="/">
 						<div className="nav-link">Home</div>
 					</Link>
 					<Link href="/properties/categoryName" className="group">
 						<div className="nav-link flex items-center pt-3">
 							<div>Categories</div>
-							<div className="group-hover:rotate-180 transition-all duration-300 ease-in-out"><MdOutlineKeyboardArrowDown /></div>
+							<div className="group-hover:rotate-180 transition-all duration-300 ease-in-out">
+								<MdOutlineKeyboardArrowDown />
+							</div>
 						</div>
 						<div className="group h-[10px]">
-						<CategoriesDropdown />
+							<CategoriesDropdown />
 						</div>
 					</Link>
 					<Link href="/packages">
@@ -41,10 +57,13 @@ const Navbar = () => {
 					</Link>
 				</div>
 			</div>
+
+	
+
 			<div className="hidden group relative lg:flex items-center justify-between space-x-4">
 				<Link href="/properties">
 					<div className="nav-link text-primary">Explore properties</div>
-					<Underline width={150}/>
+					<Underline width={150} />
 				</Link>
 
 				<Link href="/search">
@@ -53,10 +72,34 @@ const Navbar = () => {
 					</div>
 				</Link>
 			</div>
+
+			{/* Close/Open icon */}
 			<div className="lg:hidden">
-				<RxHamburgerMenu size={30} className="hover:cursor-pointer" />
+				<button onClick={toggleMenu}>
+					{isMenuOpen ? (
+						<HiX	
+							size={30}
+							className="text-black text-2xl hover:cursor-pointer"
+						/>
+					) : (
+						<RxHamburgerMenu size={30} className="hover:cursor-pointer" />
+					)}
+				</button>
 			</div>
 		</nav>
+      {/* Mobile slider */}
+      <div
+        className={`flex flex-col text-2xl lg:hidden pt-24 bg-white items-start w-[145%] sm:w-[100%] h-full pb-10 z-30
+          transform ${
+            isMenuOpen
+              ? "translate-y-0 transition-transform duration-300 ease-in-out"
+              : "translate-y-[-95%] transition-transform duration-300 ease-in-out"
+          }
+        `}
+      >
+        <MobileNav isMenuOpen={isMenuOpen} closeMenu={closeMenu} />
+      </div>
+    </>
 	);
 };
 

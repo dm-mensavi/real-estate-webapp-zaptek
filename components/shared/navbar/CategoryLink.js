@@ -8,10 +8,10 @@ const CategoryLink = ({ name, to, width }) => {
 		<div>
 			<Link href={`/guide/${to}`}>
 				<div
-					className="relative group"
+					className="relative group "
 					onMouseEnter={() => setIsHovered(true)}
 					onMouseLeave={() => setIsHovered(false)}>
-					<p className="nav-link">{name}</p>
+					<p className="text-xl nav-link lg:text-[17px] w-[180px]">{name}</p>
 					<p
 						className={`w-[${width}}px] mt-1 relative bg-primarylight/40 h-[3px] overflow-hidden group`}>
 						<div

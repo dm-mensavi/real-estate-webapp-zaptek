@@ -3,6 +3,7 @@ import Underline from "./Underline";
 import CategoryLink from "./CategoryLink";
 import CategoryImage from "./CategoryImage";
 import dynamic from 'next/dynamic'
+import { useState } from "react";
 
 const CategoriesDropdown = () => {
 	return (
