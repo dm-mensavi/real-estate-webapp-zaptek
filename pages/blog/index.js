@@ -5,14 +5,13 @@ function Blog() {
   return (
     <div>
       <div className="general-margin">
-      <h1 className="text-red-600 text-center">Blog</h1>
-      <div className="flex sm:flex-col lg:flex-col xl:flex-col sm:gap-6 sm:pl-32 sm:pr-32 items-center sm:pt-20 lg:w-[1100px]">
+      <div className="flex pt-14 flex-col sm:flex-col lg:flex-col xl:flex-col gap-6 sm:gap-6 sm:pl-32 sm:pr-32 items-center sm:pt-20 lg:w-[1100px]">
       <button className="h-10 w-40 border-2 rounded-3xl border-primary">
         <ul className="list-disc">
           <li className=" text-primary">January 10, 2023</li>
         </ul>
       </button>
-        <h1 className="text-primary font-bold text-5xl text-center">Top trends shaping the future of luxury Real Estate</h1>
+        <h1 className="text-primary font-bold text-3xl sm:text-5xl text-center font-bold pl-2 pr-2">Top trends shaping the future of luxury Real Estate</h1>
       </div>
       <div className="pt-20">
         <Image src={blog2} alt="" className="rounded-xl"/>
@@ -40,7 +39,7 @@ function Blog() {
       </button>
       <h1 className="pt-4 text-center">Realted posts</h1>
           </div>
-        <div className="flex gap-6 pt-16">
+        <div className="flex flex-col sm:grid-cols-2 sm:grid lg:flex lg:flex-row gap-6 pt-16">
         {blogdata.map((blogs)=>(
          <div key={blogs.id}>
           <Image src={blogs.image} alt='imag' className="rounded-lg" />
