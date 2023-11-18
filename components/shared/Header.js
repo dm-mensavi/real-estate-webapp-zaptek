@@ -1,9 +1,9 @@
 
 const Header =({title, description, image, children}) => {
   return (
-    <div className={`bg-${image} `}>
+    <div className={`bg-${image}`}>
       <div className=''>
-        <h1 className=''>{title}</h1>
+        <h1 className='text text-2xl'>{title}</h1>
         <p className=''>{description}</p>
         <div className=''>{children}</div>
       </div>
