@@ -95,9 +95,16 @@
   .general-margin {
     @apply px-4	sm:px-10 lg:px-20 xl:px-28 2xl:px-[10%];
   }
+}
 
-  /* .bg-properties-hero {
-    background-image: url('../public/background-Images/categories-bg.jpg');
-    background-size: cover;
-  } */
+.bg-categories {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/background-Images/categories-bg.jpg");
+}
+
+.bg-contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/background-Images/contact-bg.jpg");
+}
+
+.bg-home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/background-Images/home-bg.jpg");
 }

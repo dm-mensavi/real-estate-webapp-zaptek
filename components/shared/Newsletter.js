@@ -3,6 +3,8 @@ import diagonal from '../../public/wave.svg'
 import submitArrow from '../../public/650adcad05bc07eb4bae8dbf_arrow.svg'
 import check from '../../public/icons/check.png'
 import HeaderSummary from "./HeaderSummary"
+import { motion } from "framer-motion"
+import { fadeIn } from "./Variant"
 
 
 const Newsletter = () => {
@@ -11,15 +13,27 @@ const Newsletter = () => {
       <section className="bg-primarylight px-[5%] pt-[50px] py-[100px] md:pt-[80px] md:pb-[150px] text-center relative">
         <div className="flex justify-center items-center">
           <div className="section-content flex gap-4 flex-col max-w-[580px]">
-            <div className="section-header">
+            <motion.div
+              variants={fadeIn("up", 0.5, 0)}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: false, amount: 0 }}
+              className="section-header"
+            >
               <HeaderSummary summaryText='Join us today'/>
 
               <h2 className="text-[30px] text-white mb-1 md:text-[38px] lg:text-[43px] md:leading-tight">
                 Join our mailing list for the latest in property listings.
               </h2>
-            </div>
+            </motion.div>
 
-            <div className="section-body">
+            <motion.div 
+              variants={fadeIn("up", 0.5, 0)}
+              initial="offscreen"
+              whileInView="onscreen"
+              viewport={{ once: false, amount: 0 }
+            }
+              className="section-body">
               <h4 className="text-white mt-[30px] md:mt-2 md:text-[15px] font-medium">
                 Subscribe to our weekly email newsletter
               </h4>
@@ -62,7 +76,7 @@ const Newsletter = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 

@@ -4,27 +4,35 @@ import carIcon from "../../public/icons/car-icon.png"
 import bedIcon from "../../public/icons/bed-icon.png"
 import bathIcon from "../../public/icons/bath-icon.png"
 import directionIcon from "../../public/icons/direction-icon.png"
+import { motion } from "framer-motion"
+import { fadeIn } from "./Variant"
 
 const PropertiesCard = (props) => {
     return (
-        <div className="properties-card border rounded-lg overflow-hidden">
-            <div className="card-content relative">
+        <motion.div 
+            variants={fadeIn("up", 0.5, 0)}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0 }}
+            className="properties-card border rounded-lg overflow-hidden cursor-pointer group relative"
+        >
+            <div className="card-content">
                 {
                     props.property.id >= 5 &&
-                    <span className="absolute top-[5%] left-[5%]">
+                    <span className="absolute top-[5%] left-[5%] z-50">
                         <p className={`inline px-3 py-[7px] rounded-md text-[12px] text-[#26272b] bg-white`}>
                             FEATURED
                         </p>
                     </span>
                 }
 
-                <figure className="">
+                <figure className="overflow-hidden">
                     <Image
                         src={props.property.image}
                         alt={props.property.description}
                         width={1500} 
                         height={1000}
-                        className="block w-full object-cover object-center"
+                        className="block w-full object-cover object-center group-hover:scale-110 transition-all duration-300"
                     />
                 </figure>
 
@@ -119,7 +127,7 @@ const PropertiesCard = (props) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
