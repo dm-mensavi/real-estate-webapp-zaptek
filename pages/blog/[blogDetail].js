@@ -8,7 +8,6 @@ const blogId = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter()
   const id = router.query.blogDetail;
-  console.log(id);
   
   return (
     <div>

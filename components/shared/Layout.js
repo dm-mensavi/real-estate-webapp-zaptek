@@ -4,7 +4,7 @@ import Newsletter from "./Newsletter";
 
 const Layout = ({ children }) => {
 	return (
-		<div>
+		<div className="bg-white">
 			<Navbar />
 			<div className="mt-14">{children}</div>
 			<Newsletter />
