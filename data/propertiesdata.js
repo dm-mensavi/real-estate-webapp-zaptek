@@ -91,3 +91,42 @@ export const properties = [
   },
   
 ]
+
+export const searchFilters = [
+  {
+    id: 1,
+    type: 'Location',
+    subTypes: [
+      'Manhattan, NY', 
+      'London, UK', 
+      'Miami, FL', 
+    ]
+  },
+  {
+    id: 2,
+    type: 'Category',
+    subTypes: [
+      'House', 
+      'loft', 
+      'apartment',
+      'office' 
+    ]
+  },
+  {
+    id: 3,
+    type: 'Type',
+    subTypes: [
+      'for sale', 
+      'for rent',
+    ]
+  },
+  
+]
+
+export const propertiesHero = {
+  title: 'Browse all properties',
+  description: 'Discover more than 1,000+ property showcases.',
+  image: 'categories',
+  children: '',
+  summaryText: "Explore all Properties"
+}
