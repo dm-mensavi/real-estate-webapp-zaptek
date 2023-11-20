@@ -99,7 +99,7 @@ body {
 
   /* Navbar text styles */
   .nav-link {
-    @apply text-[1.05rem] leading-[1.1rem] font-semibold text-secondary font-sans hover:text-primary active:text-primary transition-all duration-75 ease-in-out hover:cursor-pointer;
+    @apply text-[1.1rem] leading-[1.1rem] font-semibold text-secondary font-sans hover:text-primary active:text-primary transition-all duration-75 ease-in-out hover:cursor-pointer;
   }
 
   .general-margin {
@@ -118,4 +118,69 @@ body {
 
 .bg-home {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/background-Images/home-bg.jpg");
+}
+
+.bg-blog {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/background-Images/blog-bg.jpg");
+}
+
+.bg-listing-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/listing-1.jpg");
+}
+.bg-listing-2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/listing-2.jpg");
+}
+.bg-listing-3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/listing-3.jpg");
+}
+.bg-listing-4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/listing-4.jpg");
+}
+.bg-listing-5 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/listing-5.jpg");
+}
+.bg-listing-6 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/listing-6.jpg");
+}
+
+.bg-manhattan {
+  background-image: url("/Manhattan.jpeg"); 
+  background-size: cover; 
+  background-position: center; 
+  /* filter: blur(3px); */
+}
+
+.bg-london {
+  background-image: url("/London.jpeg");
+  /* filter: blur(3px); */ 
+  background-size: cover; 
+  background-position: center; 
+}
+
+.bg-miami {
+  background-image: url("/Miami.jpeg");
+  /* filter: blur(3px); */ 
+  background-size: cover; 
+  background-position: center; 
+}
+
+/* .bg-manhattan .hero-overlay,
+.bg-london .hero-overlay,
+.bg-miami .hero-overlay {
+  background-color: rgba(0, 0, 0, .1);
+  filter: blur(3px);
+  z-index: 30;
+} */
+
+.hero-overlay.drop {
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
 }

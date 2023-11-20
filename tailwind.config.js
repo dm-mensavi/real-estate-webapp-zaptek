@@ -7,22 +7,22 @@ module.exports = {
 
 		// Or if using `src` directory:
 		"./src/**/*.{js,ts,jsx,tsx,mdx}",
-		'./node_modules/swiper/**/*.js',
+		"./node_modules/swiper/**/*.js",
 	],
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["var(--font-inter)"],
+				serif: ["var(--font-inter)"],
 			},
 			colors: {
 				primary: "#00693d",
-        		primarylight: "#00a862",
+				primarylight: "#00a862",
 				secondary: "#26272b",
 			},
 			backgroundImage: {
-				'categories': "url('/background-Images/categories-bg.jpg')",
-				'contact': "url('/background-Images/contact-bg.jpg')",
-				'home': "url('/background-Images/home-bg.jpg')",
+				categories: "url('/background-Images/categories-bg.jpg')",
+				contact: "url('/background-Images/contact-bg.jpg')",
+				home: "url('/background-Images/home-bg.jpg')",
 			},
 			boxShadow: {
 				'customA': '0 0 10px -3px rgb(0 0 0 / 0.1), 0 0px 6px -4px rgb(0 0 0 / 0.1);',

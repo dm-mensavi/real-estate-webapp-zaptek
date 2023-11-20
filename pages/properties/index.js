@@ -5,6 +5,7 @@ import FilterCard from "./components/FilterCard"
 import PropertiesSearch from "./components/PropertiesSearch"
 import { propertiesHero } from "../../data/propertiesdata"
 import { properties } from "../../data/propertiesdata"
+import Link from "next/link"
 import { searchFilters } from "../../data/propertiesdata"
 import { motion } from "framer-motion"
 
@@ -41,11 +42,11 @@ function Categories() {
         <div className="section-content max-w-[1200px] mx-auto">
           <div className="section-body">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-              {properties.map(property => (
-                  <div key={property.id}>
-                    <PropertiesCard property={property} />
-                  </div>
-              ))}
+                {properties.map(property => (
+                    <Link href={`/properties/property-detail/${property.id}`} key={property.id}>
+                      <PropertiesCard property={property} />
+                    </Link>
+                ))}
             </div>
           </div>
         </div>

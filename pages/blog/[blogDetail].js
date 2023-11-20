@@ -7,7 +7,8 @@ import blog2 from '../../public/blog-2.jpg'
 const blogId = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter()
-  const id = router.query.blogDetail;
+  const blockId = router.query.blogDetail;
+  const id = parseInt(blockId);
   
   return (
     <div>
