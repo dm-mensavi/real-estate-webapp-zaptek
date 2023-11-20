@@ -172,7 +172,9 @@ body {
   z-index: 30;
 } */
 
-.hero-overlay.drop {
+.bg-manhattan .hero-overlay.drop,
+.bg-london .hero-overlay.drop,
+.bg-miami .hero-overlay.drop {
   -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
 }
