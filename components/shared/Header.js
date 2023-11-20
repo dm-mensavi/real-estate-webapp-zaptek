@@ -8,7 +8,7 @@ import { fadeIn } from "./Variant"
 const Header =({title, description, image, children, summaryText}) => {
 
   return (
-    <div className={`bg-${image} bg-cover bg-center text-center pt-[182px] pb-[154px] px-[5%] lg:pt-[240px] lg:pb-[220px] relative`}>
+    <div className={`bg-${image} bg-cover bg-center text-center pt-[182px] pb-[154px] px-[5%] lg:pt-[180px] lg:pb-[220px] relative`}>
       <div className=''>
         <motion.div
           variants={fadeIn("up", 0.5, 0.2)}
@@ -42,7 +42,7 @@ const Header =({title, description, image, children, summaryText}) => {
         <div className=''>{children}</div>
       </div>
 
-      <figure className="w-full absolute bottom-0 left-0">
+      <figure className="w-full absolute -bottom-1 left-0">
           <Image src={diagonal} alt="diagonal shape" className="block w-full"/>
         </figure>
     </div>

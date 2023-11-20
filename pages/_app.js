@@ -4,9 +4,10 @@ import { Inter } from "next/font/google";
 import Layout from "../components/shared/Layout";
 
 const inter = Inter({
-	subsets: ["latin"],
-	display: "swap",
-	variable: "--font-inter",
+  name: 'Inter',
+  family: 'Inter',
+  weight: ['200', '300', '400', '500', '600', '700', '800'],
+	subsets: ['latin']
 });
 
 function MyApp({ Component, pageProps }) {
@@ -19,9 +20,7 @@ function MyApp({ Component, pageProps }) {
 			</Head>
 			<main className={`${inter.variable} font-sans`}>
 				<Layout>
-					<div className="mt-20">
-						<Component {...pageProps} />
-					</div>
+					<Component {...pageProps} />
 				</Layout>
 			</main>
 		</>
