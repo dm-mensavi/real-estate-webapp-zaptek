@@ -15,16 +15,30 @@ import { GiCctvCamera } from "react-icons/gi";
 import { MdOutlineLocalLaundryService } from "react-icons/md";
 import { RiParkingBoxLine } from "react-icons/ri";
 import { CiForkAndKnife } from "react-icons/ci";
+import { useRouter } from "next/router";
+import { properties } from "../../../data/propertiesdata";
 
 import { FiWifi } from "react-icons/fi";
+import Header from "../../../components/shared/Header";
+
 function PropertyDetail() {
+	const router = useRouter()
+  const {propertyId} = router.query;
+	const id = parseInt(propertyId);
+
+	const property = properties.find(property => property.id === id);
+  const description = "Modern and bright, this downtown apartment offers proximity to the finest restaurants and entertainment";
 	return (
+		<>
+		<Header summaryText={property.price} title={property.description} description={description} image={`listing-${id}`} cutout >
+			<button className="btn-primary rounded-lg mt-10">Request info</button>
+		</Header>
 		<div className="general-margin mt-20">
 			<div className="grid grid-cols-2 gap-5">
-				<Gallery />
-				<Gallery />
-				<Gallery />
-				<Gallery />
+				<Gallery id={"1"} />
+				<Gallery id={"2"} />
+				<Gallery id={"3"} />
+				<Gallery id={"4"} />
 			</div>
 
 			{/* properties details */}
@@ -40,19 +54,19 @@ function PropertyDetail() {
 					<div className="text-red-500 flex justify-between items-center lg:w-[80%] md:w-[80%] sm:w-full my-8">
 						<div className="text-primary flex justify-center items-center gap-3">
 							<LiaBedSolid size={30} />
-							<p className="text-primary">4 Bed</p>
+							<p className="text-primary">{property.beds} Bed</p>
 						</div>
 						<div className="text-primary flex justify-center items-center gap-3">
 							<PiBathtubLight size={30} />
-							<p className="text-primary">3 Baths</p>
+							<p className="text-primary">{property.baths} Baths</p>
 						</div>
 						<div className="text-primary flex justify-center items-center gap-3">
 							<BsPlusSquare size={30} />{" "}
-							<p className="text-primary">450 sqft</p>
+							<p className="text-primary">{property.size} sqft</p>
 						</div>
 						<div className="text-primary flex justify-center items-center gap-3">
 							<PiCarDuotone size={30} />{" "}
-							<p className="text-primary">4 Parking spots</p>
+							<p className="text-primary">{property.parkingspots} Parking spots</p>
 						</div>
 					</div>
 					<hr className="my-10" />
@@ -135,9 +149,9 @@ function PropertyDetail() {
 					<div className="p-x-5">
 						<div>
 							<p className="bg-red-500 text-white p-2 rounded-lg w-fit my-4">
-								FOR SALE
+								{property.type}
 							</p>
-							<h1>$450,000</h1>
+							<h1>{property.price}</h1>
 						</div>
 						<hr className="mt-4" />
 						<div>
@@ -192,6 +206,7 @@ function PropertyDetail() {
 			</div>
 			{/* <SwiperComponent /> */}
 		</div>
+		</>
 	);
 }
 

@@ -1,10 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { blogdata } from "../../data/blogdata";
+import Header from "../../components/shared/Header";
 
 function Blog() {
 	return (
-		<div className="general-margin">
+		<>
+		<Header  summaryText={"From Blog"} title={"The latest tip"} image={"blog"}/>
+
+		<div className="general-margin pb-10">
 			<div className="flex flex-col sm:grid-cols-2 sm:grid lg:flex lg:flex-row gap-6 pt-16">
 				{blogdata.map((blogs) => (
 					<div key={blogs.id}>
@@ -32,6 +36,7 @@ function Blog() {
 				))}
 			</div>
 		</div>
+		</>
 	);
 }
 

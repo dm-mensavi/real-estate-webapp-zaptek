@@ -4,8 +4,9 @@ export default function Home() {
     <div className=''>
       {/* <HomeHeader /> */}
       <main className='font-semibold'>
-        <h1 className='display-1'>Welcome to Next.js!</h1>
-        <button className="btn-secondary  my-[1200px]">Browse all properties</button>
+        
+        <h1 className=''>Welcome to Next.js!</h1>
+        <button className="">Browse all properties</button>
       </main>
     </div>
   )

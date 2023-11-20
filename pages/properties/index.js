@@ -1,6 +1,7 @@
 import Header from "../../components/shared/Header"
 import PropertiesCard from "../../components/shared/PropertiesCard"
 import { properties } from "../../data/propertiesdata"
+import Link from "next/link"
 
 const propertiesHero = {
   title: 'Browse all properties',
@@ -21,9 +22,9 @@ function Categories() {
             <div className="section-body">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 {properties.map(property => (
-                    <div key={property.id}>
+                    <Link href={`/properties/property-detail/${property.id}`} key={property.id}>
                       <PropertiesCard property={property} />
-                    </div>
+                    </Link>
                 ))}
               </div>
             </div>
