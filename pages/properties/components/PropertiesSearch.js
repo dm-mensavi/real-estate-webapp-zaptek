@@ -30,7 +30,7 @@ const PropertiesSearch = () => {
                 />
             </div>
             <button
-                className="bg-primary text-white font-semibold py-[12px] px-[36px] rounded-md sm:w-[130px] sm:absolute sm:right-2 sm:top-[8%] sm:py-[22px]" 
+                className="bg-primary hover:bg-primarylight transition-all duration-200 text-white font-semibold py-[12px] px-[36px] rounded-md sm:w-[130px] sm:absolute sm:right-2 sm:top-[8%] sm:py-[22px]" 
             >
                 Search
             </button>
