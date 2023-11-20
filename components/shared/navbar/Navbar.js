@@ -23,9 +23,9 @@ const Navbar = () => {
 	return (
 		<>
 		<nav className="fixed top-0 left-0 right-0 h-20 bg-white p-4 flex items-center justify-between z-50 px-4	sm:px-10 lg:px-20 xl:px-28 2xl:px-[10%]">
-			<div className="flex items-center justify-start space-x-5 z-40">
+			<div className="flex items-center justify-start space-x-5 ">
 				<Link href="/">
-					<div className="mr-4 cursor-pointer">
+					<div className="mr-4 cursor-pointer relative z-10">
 						<Image src="/icons/logo.png" width={120} height={120} alt="Logo" />
 					</div>
 				</Link>
@@ -59,6 +59,19 @@ const Navbar = () => {
 			</div>
 
 	
+      {/* Mobile slider */}
+      <div
+        className={`flex flex-col absolute top-0 left-0 right-0 text-2xl lg:hidden pt-5 
+				bg-white items-start w-[100vw] sm:w-[100%] h-[100vh] z-20 overflow-auto
+          transform ${
+            isMenuOpen
+              ? "translate-y-0 transition-transform duration-300 ease-in-out"
+              : "translate-y-[-100vh] transition-transform duration-300 ease-in-out"
+          }
+        `}
+      >
+        <MobileNav isMenuOpen={isMenuOpen} closeMenu={closeMenu} />
+      </div>
 
 			<div className="hidden group relative lg:flex items-center justify-between space-x-4">
 				<Link href="/properties">
@@ -73,8 +86,9 @@ const Navbar = () => {
 				</Link>
 			</div>
 
+
 			{/* Close/Open icon */}
-			<div className="lg:hidden">
+			<div className="lg:hidden relative z-30">
 				<button onClick={toggleMenu}>
 					{isMenuOpen ? (
 						<HiX	
@@ -87,18 +101,6 @@ const Navbar = () => {
 				</button>
 			</div>
 		</nav>
-      {/* Mobile slider */}
-      <div
-        className={`flex flex-col text-2xl lg:hidden pt-24 bg-white items-start w-[145%] sm:w-[100%] h-full pb-10 z-30
-          transform ${
-            isMenuOpen
-              ? "translate-y-0 transition-transform duration-300 ease-in-out"
-              : "translate-y-[-95%] transition-transform duration-300 ease-in-out"
-          }
-        `}
-      >
-        <MobileNav isMenuOpen={isMenuOpen} closeMenu={closeMenu} />
-      </div>
     </>
 	);
 };

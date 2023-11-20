@@ -19,7 +19,7 @@ import { CiForkAndKnife } from "react-icons/ci";
 import { FiWifi } from "react-icons/fi";
 function PropertyDetail() {
 	return (
-		<div className="general-margin">
+		<div className="general-margin mt-20">
 			<div className="grid grid-cols-2 gap-5">
 				<Gallery />
 				<Gallery />

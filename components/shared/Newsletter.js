@@ -80,7 +80,7 @@ const Newsletter = () => {
           </div>
         </div>
 
-        <figure className="w-full absolute bottom-0 left-0">
+        <figure className="w-full absolute -bottom-1 left-0">
           <Image src={diagonal} alt="diagonal shape" className="block w-full"/>
         </figure>
       </section>
