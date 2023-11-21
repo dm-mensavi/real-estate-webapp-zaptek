@@ -13,18 +13,18 @@ const CategoriesDropdown = () => {
 			{/* Order by category column */}
 			<div className="flex flex-col space-y-4 ml-10">
 				<h5 className="text-primary">by Category</h5>
-				<Link className="nav-link" href="/properties/House">House</Link>
-				<Link className="nav-link" href="/properties/Loft">Loft</Link>
-				<Link className="nav-link" href="/properties/Apartment">Apartment</Link>
-				<Link className="nav-link" href="/properties/Office">Office</Link>
+				<Link className="nav-link" href="/properties/category/House">House</Link>
+				<Link className="nav-link" href="/properties/category/Loft">Loft</Link>
+				<Link className="nav-link" href="/properties/category/Apartment">Apartment</Link>
+				<Link className="nav-link" href="/properties/category/Office">Office</Link>
 			</div>
 
 
 			{/* Order by type column*/}
 			<div className="flex flex-col space-y-4">
 				<h5 className="text-primary">by Type</h5>
-				<Link className="nav-link" href="/properties/Sale">Sale</Link>
-				<Link className="nav-link" href="/properties/Rent">Rent</Link>
+				<Link className="nav-link" href="/properties/category/Sale">Sale</Link>
+				<Link className="nav-link" href="/properties/category/Rent">Rent</Link>
 			</div>
 
 			{/* Order by location column */}

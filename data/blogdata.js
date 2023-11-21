@@ -2,7 +2,7 @@ import blog1 from '../public/blog-1.jpg';
 import blog2 from '../public/blog-2.jpg';
 import blog3 from '../public/blog-3.jpg'
 
-export const blogdata = [
+export const Blogdata = [
   {
     id:1,
     date: "November 7, 2022",

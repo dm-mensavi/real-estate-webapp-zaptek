@@ -1,6 +1,6 @@
 import Link from "next/link";
 import PropertiesCard from "../../../components/shared/PropertiesCard";
-import { properties } from "../../../data/propertiesdata";
+import { Properties } from "../../../data/Propertiesdata";
 import { useRouter } from "next/router";
 import Header from "../../../components/shared/Header";
 
@@ -14,37 +14,37 @@ function CategoriesFilter() {
 
 	if (category === "Sale") {
 		category = "For Sale";
-		filteredProperties = properties.filter(
+		filteredProperties = Properties.filter(
 			(property) => property.type === category.toUpperCase()
 		);
 	} else if (category === "Rent") {
 		category = "For Rent";
-		filteredProperties = properties.filter(
+		filteredProperties = Properties.filter(
 			(property) => property.type === category.toUpperCase()
 		);
 	} else if (category === "manhattan") {
 		category = "Manhattan, NY";
 		image = "manhattan";
 		cutout = true;
-		filteredProperties = properties.filter(
+		filteredProperties =Properties.filter(
 			(property) => property.location === category
 		);
 	} else if (category === "london") {
 		category = "London, UK";
 		image = "london";
 		cutout = true;
-		filteredProperties = properties.filter(
+		filteredProperties = Properties.filter(
 			(property) => property.location === category
 		);
 	} else if (category === "miami") {
 		category = "Miami, FL";
 		image = "miami";
 		cutout = true;
-		filteredProperties = properties.filter(
+		filteredProperties = Properties.filter(
 			(property) => property.location === category
 		);
 	} else {
-		filteredProperties = properties.filter(
+		filteredProperties = Properties.filter(
 			(property) => property.category === category
 		);
 	}
@@ -81,7 +81,7 @@ function CategoriesFilter() {
 							<div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
 								{filteredProperties.map((property) => (
 									<Link
-										href={`/properties/property-detail/${property.id}`}
+										href={`/properties/details/${property.id}`}
 										key={property.id}>
 										<PropertiesCard property={property} />
 									</Link>

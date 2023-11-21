@@ -1,6 +1,6 @@
 import Header from "../../components/shared/Header"
 import PropertiesCard from "../../components/shared/PropertiesCard"
-import { properties } from "../../data/propertiesdata"
+import { Properties } from "../../data/Propertiesdata"
 import Link from "next/link"
 
 const propertiesHero = {
@@ -21,8 +21,8 @@ function Categories() {
           <div className="section-content max-w-[1200px]">
             <div className="section-body">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                {properties.map(property => (
-                    <Link href={`/properties/property-detail/${property.id}`} key={property.id}>
+                {Properties.map(property => (
+                    <Link href={`/properties/details/${property.id}`} key={property.id}>
                       <PropertiesCard property={property} />
                     </Link>
                 ))}
