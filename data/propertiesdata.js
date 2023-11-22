@@ -92,6 +92,29 @@ export const properties = [
   
 ]
 
+export const categories = [
+  {
+    id:'1',
+    title: 'house',
+    image: '/icons/house-icon.png'
+  },
+  {
+    id:'2',
+    title: 'loft',
+    image: '/icons/loft-icon.png'
+  },
+  {
+    id:'3',
+    title: 'apartment',
+    image: '/icons/apartment-icon.png'
+  },
+  {
+    id:'4',
+    title: 'office',
+    image: '/icons/office-icon.png'
+  },
+]
+
 export const searchFilters = [
   {
     id: 1,

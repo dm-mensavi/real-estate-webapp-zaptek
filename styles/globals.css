@@ -124,6 +124,13 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/background-Images/blog-bg.jpg");
 }
 
+.bg-homeCategory {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/background-Images/home-category.jpg"); 
+  /* background-position: 50% 100%, 0 0, 50% 0;
+    background-repeat: no-repeat, repeat, no-repeat;
+    background-size: contain, auto, cover; */
+}
+
 .bg-listing-1 {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/listing-1.jpg");
 }

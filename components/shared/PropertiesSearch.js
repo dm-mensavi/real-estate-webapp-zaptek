@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
-import { fadeIn } from "../../../components/shared/Variant"
+import { fadeIn } from "./Variant"
 import Image from "next/image"
-import searchicon from '../../../public/icons/search.png'
+import searchicon from '../../public/icons/search.png'
 
 const PropertiesSearch = () => {
     return (

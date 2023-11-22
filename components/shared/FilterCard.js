@@ -1,5 +1,5 @@
 import { useState } from "react"
-import arrow from '../../../public/651175a3d472aedd788836cb_arrow.svg'
+import arrow from '../../public/651175a3d472aedd788836cb_arrow.svg'
 import Image from "next/image"
 
 const FilterCard = (props) => {
@@ -9,10 +9,10 @@ const FilterCard = (props) => {
         <div
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className="cursor-pointer"
+            className="cursor-pointer relative"
         >
             <div>
-                <div className={`px-[25px] py-[28px] border rounded-md flex justify-between items-center ${isHovered ? 'shadow-customB' : 'shadow-customA'} transition-all`}>
+                <div className={`px-[25px] py-[28px] border rounded-md flex justify-between items-center ${isHovered ? 'shadow-customB' : 'shadow-customA'} transition-all z-50`}>
                     <h4 className="text-[#6e6e6e] font-medium">
                         {props.filter.type}
                     </h4>
@@ -26,7 +26,7 @@ const FilterCard = (props) => {
                 </div>
                 {
                     isHovered && 
-                    <div className="px-[25px] py-2 border mt-2 rounded-md">
+                    <div className="px-[25px] py-2 border mt-2 rounded-md relative lg:absolute top-[95%] left-0 w-full bg-white z-40">
                         {props.filter.subTypes.map( subtype => (
                             <div key={subtype}>
                                 <h4 className="text-[16px] text-[#6e6e6e] py-2 capitalize hover:text-black transition-all">

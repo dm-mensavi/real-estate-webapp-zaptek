@@ -27,6 +27,10 @@ module.exports = {
 			boxShadow: {
 				'customA': '0 0 10px -3px rgb(0 0 0 / 0.1), 0 0px 6px -4px rgb(0 0 0 / 0.1);',
 				'customB': '0 0 15px -3px rgb(0 0 0 / 0.2), 0 0px 6px -4px rgb(0 0 0 / 0.2);',
+				'customC': '0 2px 7px rgba(0, 0, 0, .04);',
+			},
+			screens: {
+				'xl2': '1300px',
 			},
 		},
 	},
