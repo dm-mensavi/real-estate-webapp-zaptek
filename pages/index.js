@@ -15,6 +15,7 @@
   import AllProperties from "../components/PropertiesDetails/AllProperties"
   import ReviewCard from "../components/home/ReviewCard"
   import { Reviews } from "../data/Review"
+  import MoreBlogs from "../components/blogsCompo/MoreBlogs"
 
   import { Swiper, SwiperSlide } from "swiper/react";
   // import required modules
@@ -368,11 +369,37 @@
               </div>
             </div>
           </section>
-          
-          <section className="px-[5%] pt-[50px] py-[60px] md:pt-[80px] md:pb-[150px]"></section>
-          
-          <h1 className=''>Welcome to Next.js!</h1>
-          <button className="">Browse all properties</button>
+
+          <section className="px-[5%] pt-[60px] py-[60px] md:py-[150px] bg-[#f7f8fc]">
+            <div className="section-content max-w-[1200px] mx-auto">
+              <motion.div 
+                variants={fadeIn("up", 0.5, 0)}
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+                className="section-header flex justify-center items-center flex-col"
+              >
+                <HeaderSummary 
+                  containerBorder={`border-primary `}
+                  textColor={`text-primary`}
+                  dotBgColor={`bg-primary`}
+                  summaryText={'From Blog'} 
+                />
+
+                <h2 
+                  className={`text-[30px] font-semibold text-[#000] sm:text-[40px] md:text-[38px] leading-tight text-center mb-[5px]`}
+                >
+                  The latest tips
+                </h2>
+              </motion.div>
+
+            <div className="section-body">
+              <div className="">
+                  <MoreBlogs/>
+              </div>
+              </div>
+            </div>
+          </section>
         </main>
       </div>
     )
