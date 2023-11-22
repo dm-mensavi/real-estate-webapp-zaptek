@@ -64,6 +64,30 @@ export const zoomIn = ( duration, delay) => {
       };
 };
 
+export const Scale = (duration ,delay) => {
+  return {
+    offscreen: {
+      opacity: 0,
+      scale: 0.8,
+      transition: {
+        type: 'tween',
+        duration: duration,
+        delay: delay,
+        ease: [0.1, 0.1, 0.1, .15],
+      },
+    },
+    onscreen: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: 'tween',
+        duration: duration,
+        delay: delay,
+        ease: [0.1, 0.1, 0.1, .15],
+      },
+    },
+  }};
+
 /* export const container = (delay, stagger) => {
     return {
         offscreen: { opacity: 1, scale: 1 },
