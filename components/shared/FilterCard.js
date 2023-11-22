@@ -26,7 +26,7 @@ const FilterCard = (props) => {
                 </div>
                 {
                     isHovered && 
-                    <div className="px-[25px] py-2 border mt-2 rounded-md relative lg:absolute top-[95%] left-0 w-full bg-white z-40">
+                    <div className="px-[25px] py-2 border mt-[5px] rounded-md relative lg:absolute top-[95%] left-0 w-full bg-white z-40">
                         {props.filter.subTypes.map( subtype => (
                             <div key={subtype}>
                                 <h4 className="text-[16px] text-[#6e6e6e] py-2 capitalize hover:text-black transition-all">

@@ -89,7 +89,7 @@ export default function Home() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                   {Properties.map(property => (
                       property.id >= '5' && 
-                      <Link href={`/properties/property-detail/${property.id}`} key={property.id}>
+                      <Link href={`/properties/details/${property.id}`} key={property.id}>
                         <PropertiesCard property={property} />
                       </Link> 
                   ))}
