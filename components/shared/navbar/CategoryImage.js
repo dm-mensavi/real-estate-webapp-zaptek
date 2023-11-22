@@ -7,7 +7,7 @@ function CategoryImage({ imageUrl, to, text }) {
 
 	return (
 		<div className="h-[80px]">
-			<Link href={`/properties/${to}`}>
+			<Link href={`/properties/category/${to}`}>
 				<Image
 					src={`/${imageUrl}.jpeg`}
 					width={1500}

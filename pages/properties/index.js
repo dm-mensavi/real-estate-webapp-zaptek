@@ -3,17 +3,17 @@ import PropertiesCard from "../../components/shared/PropertiesCard"
 import { fadeIn } from "../../components/shared/Variant"
 import FilterCard from "../../components/shared/FilterCard"
 import PropertiesSearch from "../../components/shared/PropertiesSearch"
-import { propertiesHero } from "../../data/propertiesdata"
-import { properties } from "../../data/propertiesdata"
+import { PropertiesHero } from "../../data/Propertiesdata"
+import { Properties } from "../../data/Propertiesdata"
 import Link from "next/link"
-import { searchFilters } from "../../data/propertiesdata"
+import { SearchFilters } from "../../data/Propertiesdata"
 import { motion } from "framer-motion"
 
 
 function Categories() {
   return (
     <div>
-      <Header {...propertiesHero} />
+      <Header {...PropertiesHero} />
 
       <section className="px-[5%] py-[30px] ">
         <div className="section-content max-w-[1200px] mx-auto">
@@ -21,7 +21,7 @@ function Categories() {
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 items-start justify-start">
                 <PropertiesSearch />
 
-                {searchFilters.map(filter => (
+                {SearchFilters.map(filter => (
                   <motion.div 
                   variants={fadeIn("up", 0.5, 0)}
                   initial="offscreen"
@@ -42,8 +42,8 @@ function Categories() {
         <div className="section-content max-w-[1200px] mx-auto">
           <div className="section-body">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                {properties.map(property => (
-                    <Link href={`/properties/property-detail/${property.id}`} key={property.id}>
+                {Properties.map(property => (
+                    <Link href={`/properties/details/${property.id}`} key={property.id}>
                       <PropertiesCard property={property} />
                     </Link>
                 ))}

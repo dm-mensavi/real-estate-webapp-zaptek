@@ -1,18 +1,16 @@
 import Image from "next/image"
 import { useRouter } from "next/router"
 import Link from "next/link"
-import { blogdata } from "../../data/blogdata"
-import blog2 from '../../public/blog-2.jpg'
+import { Blogdata } from "../../data/Blogdata"
 
-const blogId = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+const BlogId = () => {
   const router = useRouter()
   const blockId = router.query.blogDetail;
   const id = parseInt(blockId);
   
   return (
-    <div>
-         <div className="general-margin ">
+    <div className="mt-10">
+         <div className="general-margin">
       <div className="flex pt-14 flex-col sm:flex-col lg:flex-col xl:flex-col gap-6 sm:gap-6 sm:pl-32 sm:pr-32 items-center sm:pt-20 lg:w-[1100px]">
       <button className="h-10 w-40 border-2 rounded-3xl border-primary">
         <ul className="list-disc">
@@ -48,10 +46,10 @@ const blogId = () => {
       <h1 className="pt-4 text-center">Realted posts</h1>
           </div>
         <div className="flex flex-col sm:grid-cols-2 sm:grid lg:flex lg:flex-row gap-6 pt-16">
-        {blogdata.map((blogs)=>(
+        {Blogdata.map((blogs)=>(
          <div key={blogs.id}>
           <Link href={`/blog/${blogs.id}`}>
-          <Image src={blogs.image} alt='imag' className="rounded-lg" />
+          <Image src={blogs.image} width={1500} height={1000} alt='imag' className="rounded-lg" />
           </Link>
           <div className="pt-8">
           <button className="h-10 w-40 border-2 rounded-3xl border-primary">
@@ -74,4 +72,4 @@ const blogId = () => {
   )
 }
 
-export default blogId
+export default BlogId

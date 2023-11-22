@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { blogdata } from "../../data/blogdata";
+import { Blogdata } from "../../data/Blogdata";
 import Header from "../../components/shared/Header";
 
 function Blog() {
@@ -10,10 +10,10 @@ function Blog() {
 
 		<div className="general-margin pb-10">
 			<div className="flex flex-col sm:grid-cols-2 sm:grid lg:flex lg:flex-row gap-6 pt-16">
-				{blogdata.map((blogs) => (
+				{Blogdata.map((blogs) => (
 					<div key={blogs.id}>
 						<Link href={`/blog/${blogs.id}`}>
-							<Image src={blogs.image} alt="imag" className="rounded-lg" />
+							<Image src={blogs.image} width={1500} height={1000} alt="imag" className="rounded-lg" />
 						</Link>
 						<div className="pt-8">
 							<button className="h-10 w-40 border-2 rounded-3xl border-primary">

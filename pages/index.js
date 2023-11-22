@@ -2,7 +2,7 @@ import Header from "../components/shared/Header"
 import Image from 'next/image'
 import arrow from '../public/650adcad05bc07eb4bae8dbf_arrow.svg'
 import PropertiesSearch from "../components/shared/PropertiesSearch"
-import { searchFilters, properties } from "../data/propertiesdata"
+import { SearchFilters, Properties } from "../data/Propertiesdata"
 import FilterCard from "../components/shared/FilterCard"
 import PropertiesCard from "../components/shared/PropertiesCard"
 import { motion } from "framer-motion"
@@ -10,7 +10,7 @@ import { fadeIn } from "../components/shared/Variant"
 import Link from 'next/link'
 import HeaderSummary from "../components/shared/HeaderSummary"
 import diagonal from '../public/wave.svg'
-import { categories } from "../data/propertiesdata"
+import { Categories } from "../data/Propertiesdata"
 import CategoryCard from "../components/home/CategoryCard"
 import AllProperties from "../components/PropertiesDetails/AllProperties"
 
@@ -45,7 +45,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 items-start justify-start">
                   <PropertiesSearch />
 
-                  {searchFilters.map(filter => (
+                  {SearchFilters.map(filter => (
                     <motion.div 
                     variants={fadeIn("up", 0.5, 0)}
                     initial="offscreen"
@@ -87,7 +87,7 @@ export default function Home() {
 
             <div className="section-body mt-[60px]">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                  {properties.map(property => (
+                  {Properties.map(property => (
                       property.id >= '5' && 
                       <Link href={`/properties/property-detail/${property.id}`} key={property.id}>
                         <PropertiesCard property={property} />
@@ -124,7 +124,7 @@ export default function Home() {
 
             <div className="section-body mt-[60px]">
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-[25px]">
-                  {categories.map(category => (
+                  {Categories.map(category => (
                     <div key={category.id}>
                       <CategoryCard category={category}/>
                     </div>

@@ -1,4 +1,4 @@
-export const clientsdata = [
+export const Clientsdata = [
   {
     id:1,
     name:"John and Sarah Thompson",

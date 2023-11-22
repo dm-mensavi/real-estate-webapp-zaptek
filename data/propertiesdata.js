@@ -1,4 +1,4 @@
-export const properties = [
+export const Properties = [
   {
     id: 1,
     price:"$4,000,000",
@@ -92,7 +92,7 @@ export const properties = [
   
 ]
 
-export const categories = [
+export const Categories = [
   {
     id:'1',
     title: 'house',
@@ -115,7 +115,7 @@ export const categories = [
   },
 ]
 
-export const searchFilters = [
+export const SearchFilters = [
   {
     id: 1,
     type: 'Location',
@@ -146,7 +146,7 @@ export const searchFilters = [
   
 ]
 
-export const propertiesHero = {
+export const PropertiesHero = {
   title: 'Browse all properties',
   description: 'Discover more than 1,000+ property showcases.',
   image: 'categories',
