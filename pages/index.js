@@ -96,15 +96,15 @@
                 </h2>
               </motion.div>
 
-              <div className="section-body mt-[60px]">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                    {Properties.map(property => (
-                        property.id >= '5' && 
-                        <Link href={`/properties/property-detail/${property.id}`} key={property.id}>
-                          <PropertiesCard property={property} />
-                        </Link> 
-                    ))}
-                </div>
+            <div className="section-body mt-[60px]">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                  {Properties.map(property => (
+                      property.id >= '5' && 
+                      <Link href={`/properties/details/${property.id}`} key={property.id}>
+                        <PropertiesCard property={property} />
+                      </Link> 
+                  ))}
+              </div>
 
                 <div
                   className="flex justify-center items-center"
