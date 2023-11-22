@@ -11,13 +11,13 @@ const BlogId = () => {
   return (
     <div className="mt-10">
          <div className="general-margin">
-      <div className="flex pt-14 flex-col sm:flex-col lg:flex-col xl:flex-col gap-6 sm:gap-6 sm:pl-32 sm:pr-32 items-center sm:pt-20 lg:w-[1100px]">
+      <div className="flex pt-14 flex-col sm:flex-col lg:flex-col xl:flex-col gap-6 sm:gap-6 sm:pl-32 sm:pr-32 mx-auto items-center sm:pt-20 lg:w-[1100px]">
       <button className="h-10 w-40 border-2 rounded-3xl border-primary">
         <ul className="list-disc">
           <li className=" text-primary">January 10, 2023</li>
         </ul>
       </button>
-        <h1 className="text-primary font-bold text-3xl sm:text-5xl text-center font-bold pl-2 pr-2">Top trends shaping the future of luxury Real Estate</h1>
+        <h1 className="text-primary font-bold text-3xl sm:text-5xl text-center pl-2 pr-2">Top trends shaping the future of luxury Real Estate</h1>
       </div>
       <div className="pt-20 md:px-56">
         <Image src={`/blog-${id}.jpg`} alt="" width={1500} height={1000} className="rounded-xl"/>
