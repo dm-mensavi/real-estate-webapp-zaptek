@@ -7,7 +7,7 @@ import { fadeIn } from "./Variant"
 
 const Header =({title, description, image, children, summaryText, cutout}) => {
   return (
-    <div className={`bg-${image} mt-16 bg-cover bg-center text-center pt-[182px] pb-[154px] px-[5%] lg:pt-[180px] lg:pb-[220px] relative`}>
+    <div className={`bg-${image} ${image != 'home' && 'mt-16'} bg-cover bg-center text-center pt-[182px] pb-[154px] px-[5%] lg:pt-[180px] lg:pb-[220px] relative`}>
   
       <div className={`z-30 relative ${image === 'home' ? 'flex flex-col items-start justify-start max-w-[550px] lg:left-20 -top-14' : ''}`}>
         <motion.div
@@ -24,7 +24,7 @@ const Header =({title, description, image, children, summaryText, cutout}) => {
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: true, amount: 0 }}
-          className={`text-[33px] ${image === 'home' ? 'text-left' : ''} font-semibold text-[#ffffff] sm:text-[40px] md:text-[68px] leading-tight`}
+          className={`text-[33px] ${image === 'home' ? 'text-left' : ''} font-semibold text-[#ffffff] sm:text-[40px] md:text-[68px] leading-[1.1]`}
         >
           {title}
         </motion.h1>

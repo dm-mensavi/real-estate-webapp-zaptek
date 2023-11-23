@@ -2,6 +2,7 @@ import React from 'react'
 import Image from "next/image";
 import Link from "next/link";
 import { Blogdata } from "../../data/Blogdata";
+import HeaderSummary from '../shared/HeaderSummary';
 
 const MoreBlogs = () => {
   return (
@@ -13,14 +14,17 @@ const MoreBlogs = () => {
 							<Image src={blogs.image} width={1500} height={1000} alt="imag" className="rounded-lg" />
 						</Link>
 						<div className="pt-8">
-							<button className="h-10 w-40 border-2 rounded-3xl border-primary">
-								<ul className="list-disc">
-									<li className=" text-primary">{blogs.date} </li>
-								</ul>
-							</button>
+							<HeaderSummary 
+								containerBorder={`border-primary`}
+								textColor={`text-primary`}
+								dotBgColor={`bg-primary`}
+								summaryText={blogs.date} 
+							/>
 						</div>
+
+
 						<div>
-							<h3 className="text-black pt-8">{blogs.title} </h3>
+							<h3 className="text-black">{blogs.title} </h3>
 						</div>
 						<div className="pt-12">
 							<Link href={`/blog/${blogs.id}`}>

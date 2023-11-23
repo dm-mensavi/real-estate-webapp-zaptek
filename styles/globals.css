@@ -171,14 +171,6 @@ body {
   background-position: center; 
 }
 
-/* .bg-manhattan .hero-overlay,
-.bg-london .hero-overlay,
-.bg-miami .hero-overlay {
-  background-color: rgba(0, 0, 0, .1);
-  filter: blur(3px);
-  z-index: 30;
-} */
-
 .bg-manhattan .hero-overlay.drop,
 .bg-london .hero-overlay.drop,
 .bg-miami .hero-overlay.drop {
@@ -192,4 +184,55 @@ body {
   bottom: 0%;
   left: 0%;
   right: 0%;
+}
+
+.review-cards .swiper-button-next,
+.review-cards .swiper-button-prev {
+  background-color: #00693d;
+  width: 77px;
+  height: 77px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-cards .swiper-button-next:after,
+.review-cards .swiper-button-prev:after {
+  font-size: 15px!important;
+  font-weight: 900;
+  color: white;
+}
+
+.swiper-button-prev.swiper-button-disabled, 
+.swiper-button-next.swiper-button-disabled {
+  display: none;
+}
+
+.review-cards .swiper {
+  overflow: visible;
+}
+
+/* .review-cards .swiper {
+  padding-bottom: 6rem;
+}
+
+@media screen and (max-width: 767px) {
+  .review-cards .swiper-button-next,
+  .review-cards .swiper-button-prev {
+    top: 83%;
+  }
+
+  .review-cards .swiper-button-next {
+    left: 100px;
+  }
+  .review-cards .swiper-button-prev {
+    right: 100px;
+  }
+
+  
+} */
+
+body{
+  overflow-x: hidden;
 }

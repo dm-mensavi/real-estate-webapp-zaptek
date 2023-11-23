@@ -94,53 +94,68 @@ export const Properties = [
 
 export const Categories = [
   {
-    id:'1',
+    id: '1',
     title: 'house',
+    to: 'House',
     image: '/icons/house-icon.png'
   },
   {
-    id:'2',
+    id: '2',
     title: 'loft',
+    to: 'Loft',
     image: '/icons/loft-icon.png'
   },
   {
-    id:'3',
+    id: '3',
     title: 'apartment',
+    to: 'Apartment',
     image: '/icons/apartment-icon.png'
   },
   {
-    id:'4',
+    id: '4',
     title: 'office',
+    to: 'Office',
     image: '/icons/office-icon.png'
   },
-]
+];
+
+export const Locations = [
+  {
+    'id': 'abc123',
+    'title': 'Manhattan, NY',
+    'to': 'manhattan',
+  },
+  {
+    'id': 'def456',
+    'title': 'London, UK',
+    'to': 'london',
+  },
+  {
+    'id': 'ghi789',
+    'title': 'Miami, FL', 
+    'to': 'miami',
+  },
+];
+
 
 export const SearchFilters = [
   {
     id: 1,
     type: 'Location',
-    subTypes: [
-      'Manhattan, NY', 
-      'London, UK', 
-      'Miami, FL', 
-    ]
+    subTypes: Locations
+    
   },
   {
     id: 2,
     type: 'Category',
-    subTypes: [
-      'House', 
-      'loft', 
-      'apartment',
-      'office' 
-    ]
+    subTypes: Categories
   },
   {
     id: 3,
     type: 'Type',
     subTypes: [
-      'for sale', 
-      'for rent',
+      { title: 'for sale', to: 'Sale' },
+      { title: 'for rent', to: 'Rent' },
     ]
   },
   
