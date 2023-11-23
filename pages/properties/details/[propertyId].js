@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Gallery from "../../../components/PropertiesDetails/Gallery";
 import AllProperties from "../../../components/PropertiesDetails/AllProperties";
+import arrow from '../../../public/650adcad05bc07eb4bae8dbf_arrow.svg'
+import Link from "next/link";
 // import SwiperComponent from '../../../components/PropertiesDetails/SwiperComponent'
 import { LiaBedSolid } from "react-icons/lia";
 import {
@@ -38,7 +40,20 @@ function PropertyDetail() {
 					description={description}
 					image={`listing-${id}`}
 					cutout>
-					<button className="btn-primary rounded-lg mt-10">Request info</button>
+          <Link href={`/postproperty`}>
+            <button className="btn-primary rounded-md mt-[60px] flex mx-auto gap-3 group">
+              Request info
+
+              <figure className="w-[13px] group-hover:translate-x-[2px] group-hover:-translate-y-[2px] transition-all">
+                <Image 
+                  src={arrow}
+                  alt="arrow"
+                  className="block w-full"
+                />
+              </figure>
+            </button>
+          </Link>
+					
 				</Header>
 				<div className="general-margin mt-20">
 					<div className="grid grid-cols-2 gap-5">
