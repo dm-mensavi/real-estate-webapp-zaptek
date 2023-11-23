@@ -1,6 +1,7 @@
 import { useState } from "react"
 import arrow from '../../public/651175a3d472aedd788836cb_arrow.svg'
 import Image from "next/image"
+import Link from "next/link";
 
 const FilterCard = (props) => {
     const [isHovered, setIsHovered] = useState(false)
@@ -28,11 +29,14 @@ const FilterCard = (props) => {
                     isHovered && 
                     <div className="px-[25px] py-2 border mt-[5px] rounded-md relative lg:absolute top-[95%] left-0 w-full bg-white z-40">
                         {props.filter.subTypes.map( subtype => (
-                            <div key={subtype}>
+                            <Link
+                                href={`/properties/category/${subtype.to}`}
+                                key={subtype}
+                            >
                                 <h4 className="text-[16px] text-[#6e6e6e] py-2 capitalize hover:text-black transition-all">
-                                    {subtype}
+                                    {subtype.title}
                                 </h4>
-                            </div>
+                            </Link>
                         ) )}
                     </div>
                 }

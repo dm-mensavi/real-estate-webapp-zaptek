@@ -36,17 +36,19 @@
           image={"home"}
           description={'Discover more than 1,000+ property showcases.'}
         >
-          <button className="btn-primary rounded-md mt-[60px] flex justify-center items-center gap-3 group">
-            Post a property
+          <Link href={`/post-a-event`}>
+            <button className="btn-primary rounded-md mt-[60px] flex justify-center items-center gap-3 group">
+              Post a property
 
-            <figure className="w-[13px] group-hover:translate-x-[2px] group-hover:-translate-y-[2px] transition-all">
-              <Image 
-                src={arrow}
-                alt="arrow"
-                className="block w-full"
-              />
-            </figure>
-          </button>
+              <figure className="w-[13px] group-hover:translate-x-[2px] group-hover:-translate-y-[2px] transition-all">
+                <Image 
+                  src={arrow}
+                  alt="arrow"
+                  className="block w-full"
+                />
+              </figure>
+            </button>
+          </Link>
         </Header>
 
         <main className='font-semibold'>
@@ -106,14 +108,16 @@
                       </Link> 
                   ))}
               </div>
-
-                <div
-                  className="flex justify-center items-center"
-                >
-                  <button className="btn-secondary rounded-md mt-[60px] flex justify-center items-center gap-3 group">
-                    Browse all properties
-                  </button>
-                </div>
+                
+                <Link href={`/properties`}>
+                  <div
+                    className="flex justify-center items-center"
+                  >
+                    <button className="btn-secondary rounded-md mt-[60px] flex justify-center items-center gap-3 group">
+                      Browse all properties
+                    </button>
+                  </div>
+                </Link>
               </div>
             </div>
           </section>
@@ -186,14 +190,16 @@
                   <AllProperties />
                   <AllProperties />
                 </div>
-
-                <div
-                  className="flex justify-center items-center"
-                >
-                  <button className="btn-secondary rounded-md mt-[60px] flex justify-center items-center gap-3 group">
-                    Browse all properties
-                  </button>
-                </div>
+                
+                <Link href={`/properties`}>
+                  <div
+                    className="flex justify-center items-center"
+                  >
+                    <button className="btn-secondary rounded-md mt-[60px] flex justify-center items-center gap-3 group">
+                      Browse all properties
+                    </button>
+                  </div>
+                </Link>
               </div>
             </div>
           </section>
@@ -213,18 +219,20 @@
                   <h2 className="text-[30px] text-white text-left mb-1 md:text-[38px] lg:text-[43px] md:leading-tight">
                   Uncover exceptional properties at value prices only here.
                   </h2>
+                  
+                  <Link href={`/post-a-event`}>
+                    <button className="btn-secondary hover:bg-white hover:text-black font-bold rounded-md mt-[60px] flex justify-center items-center gap-3 group">
+                      Post a property
 
-                  <button className="btn-secondary hover:bg-white hover:text-black font-bold rounded-md mt-[60px] flex justify-center items-center gap-3 group">
-                    Post a property
-
-                    <figure className="w-[13px] group-hover:translate-x-[2px] group-hover:-translate-y-[2px] transition-all">
-                      <Image 
-                        src={arrow}
-                        alt="arrow"
-                        className="block w-full filter invert-[100%]"
-                      />
-                    </figure>
-                  </button>
+                      <figure className="w-[13px] group-hover:translate-x-[2px] group-hover:-translate-y-[2px] transition-all">
+                        <Image 
+                          src={arrow}
+                          alt="arrow"
+                          className="block w-full filter invert-[100%]"
+                        />
+                      </figure>
+                    </button>
+                  </Link>
                 </motion.div>
 
                 <div className="section-body order-1 flex justify-center items-center">
