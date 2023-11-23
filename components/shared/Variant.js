@@ -67,6 +67,7 @@ export const zoomIn = ( duration, delay) => {
 export const Scale = (duration ,delay) => {
   return {
     offscreen: {
+      y: 50,
       opacity: 0,
       scale: 0.8,
       transition: {
@@ -77,6 +78,7 @@ export const Scale = (duration ,delay) => {
       },
     },
     onscreen: {
+      y: 0,
       opacity: 1,
       scale: 1,
       transition: {

@@ -203,3 +203,32 @@ body {
   font-weight: 900;
   color: white;
 }
+
+.swiper-button-prev.swiper-button-disabled, 
+.swiper-button-next.swiper-button-disabled {
+  display: none;
+}
+
+.review-cards .swiper {
+  overflow: visible;
+}
+
+/* .review-cards .swiper {
+  padding-bottom: 6rem;
+}
+
+@media screen and (max-width: 767px) {
+  .review-cards .swiper-button-next,
+  .review-cards .swiper-button-prev {
+    top: 83%;
+  }
+
+  .review-cards .swiper-button-next {
+    left: 100px;
+  }
+  .review-cards .swiper-button-prev {
+    right: 100px;
+  }
+
+  
+} */

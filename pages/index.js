@@ -274,7 +274,13 @@
               </motion.div>
 
               <div className="section-body mt-[60px]">
-                <div className="review-cards">
+                <motion.div 
+                  variants={fadeIn("up", 0.5, 0)}
+                  initial="offscreen"
+                  whileInView="onscreen"
+                  viewport={{ once: true, amount: 0 }}
+                  className="review-cards"
+                >
                   <Swiper
                     slidesPerView={1}
                     spaceBetween={30}
@@ -295,7 +301,7 @@
                       ))
                     }
                   </Swiper>                    
-                </div>
+                </motion.div>
                 <div className="section-body-b mt-[150px] grid lg:grid-cols-2 items-center justify-center gap-[80px]">
                   <motion.div 
                     variants={fadeIn("up", 0.5, 0)}
@@ -394,9 +400,15 @@
               </motion.div>
 
             <div className="section-body">
-              <div className="">
+              <motion.div 
+                variants={fadeIn("up", 0.5, 0)}
+                initial="offscreen"
+                whileInView="onscreen"
+                viewport={{ once: true, amount: 0 }}
+                className=""
+              >
                   <MoreBlogs/>
-              </div>
+              </motion.div>
               </div>
             </div>
           </section>
