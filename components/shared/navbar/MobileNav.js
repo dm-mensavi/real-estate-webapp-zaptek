@@ -22,7 +22,7 @@ function MobileNav({ isMenuOpen, closeMenu }) {
 	};
 
 	return (
-		<div className={`pl-10 flex flex-col space-y-5 pt-0 text-xl`}>
+		<div className={`pl-10 flex flex-col space-y-5 pb-8 text-xl`}>
 			<div className="mr-4 cursor-pointer pb-10">
 				<Image src="/icons/logo.png" width={120} height={120} alt="Logo" />
 			</div>
@@ -42,7 +42,7 @@ function MobileNav({ isMenuOpen, closeMenu }) {
 				</div>
 				{DropdownOpen && (
 					<div className="group">
-						<MobileCategoriesDropdown />
+						<MobileCategoriesDropdown toggle={handleLinkClick}/>
 					</div>
 				)}
 			</div>

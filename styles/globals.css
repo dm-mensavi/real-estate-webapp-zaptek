@@ -43,22 +43,22 @@ body {
 
   /* Display Styles: styled headings */
   .display-1 {
-    @apply text-[68px] leading-[75px] font-semibold text-black font-sans;
+    @apply text-[4rem] leading-[4.6rem] font-semibold text-black font-sans;
   }
   .display-2 {
-    @apply text-[43px] leading-[52px] font-semibold text-black font-sans;
+    @apply text-[2.68rem] leading-[3.2rem] font-semibold text-black font-sans;
   }
   .display-3 {
-    @apply text-[19px] leading-[19px] font-semibold text-black font-sans;
+    @apply text-[1.2rem] leading-[1.2rem] font-semibold text-black font-sans;
   }
   
 
   /* Paragraph Styles  */
   p {
-    @apply text-[17px] leading-[22px] font-medium text-[#6e6e6e] font-sans;
+    @apply text-[1rem] leading-[22px] font-medium text-[#6e6e6e] font-sans;
   }
   .p-lg {
-    @apply text-[24px] leading-[32px] font-medium text-[#6e6e6e] font-sans;
+    @apply text-[1.5rem] leading-[32px] font-medium text-[#6e6e6e] font-sans;
   }
   .p-italic {
     @apply text-[24px] leading-[32px] font-medium text-[#6e6e6e] font-sans italic;

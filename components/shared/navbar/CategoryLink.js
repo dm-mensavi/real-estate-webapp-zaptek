@@ -1,12 +1,12 @@
 import { useState } from "react";
 import Link from "next/link";
 
-const CategoryLink = ({ name, to, width }) => {
+const CategoryLink = ({ name, to, width, toggleNav }) => {
 	const [isHovered, setIsHovered] = useState(false);
 
 	return (
 		<div>
-			<Link href={`/guide/${to}`}>
+			<Link href={`/guide/${to}`}  onClick={toggleNav}>
 				<div
 					className="relative group "
 					onMouseEnter={() => setIsHovered(true)}
