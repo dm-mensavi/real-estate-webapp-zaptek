@@ -11,7 +11,7 @@ function Contact() {
               <input
                 type="text"
                 placeholder="John Doe"
-                className="p-3 border rounded my-3 w-full"
+                className="p-3 border border-slate-300 rounded my-3 w-full focus:outline-blue-500 outline-2"
               />
             </div>
             <div className="flex flex-col ">
@@ -19,7 +19,7 @@ function Contact() {
               <input
                 type="email"
                 placeholder="contact@email.com"
-                className="p-3 border rounded my-3 w-full"
+                className="p-3 border border-slate-300 rounded my-3 w-full focus:outline-blue-500 outline-2"
               />
             </div>
           </div>
@@ -29,7 +29,7 @@ function Contact() {
               <input
                 type="tel"
                 placeholder="+1 345-678"
-                className="p-3 border rounded my-3 w-full"
+                className="p-3 border border-slate-300 rounded my-3 w-full focus:outline-blue-500 outline-2"
               />
             </div>
             <div className="flex flex-col ">
@@ -37,7 +37,7 @@ function Contact() {
               <input
                 type="text"
                 placeholder="Add Company"
-                className="p-3 border rounded my-3 w-full"
+                className="p-3 border border-slate-300 rounded my-3 w-full focus:outline-blue-500 outline-2"
               />
             </div>
           </div>
@@ -45,7 +45,7 @@ function Contact() {
             <label>Message</label>
             <textarea
               placeholder="Please type your message here..."
-              className="w-full p-4 border rounded my-3"
+              className="p-3 border border-slate-300 rounded my-3 w-full focus:outline-blue-500 outline-2"
             />
           </div>
           <div>
