@@ -316,7 +316,7 @@
                   <Swiper
                     breakpoints={breakpoints}
                     spaceBetween={20}
-                    noSwiping
+                    noSwiping={false}
                     navigation= {true}				
                     loop={true}
                     modules={[Navigation]}
