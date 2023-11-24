@@ -35,8 +35,9 @@
           title={'Where dream homes become a reality.'}
           image={"home"}
           description={'Discover more than 1,000+ property showcases.'}
+          styles={"mt-16"}
         >
-          <Link href={`/post-a-event`}>
+          <Link href={`/postproperty`}>
             <button className="btn-primary rounded-md mt-[60px] flex justify-center items-center gap-3 group">
               Post a property
 
