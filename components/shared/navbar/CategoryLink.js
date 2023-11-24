@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import dynamic from 'next/dynamic'
 
 const CategoryLink = ({ name, to, width, toggleNav, styles }) => {
 	const [isHovered, setIsHovered] = useState(false);
@@ -25,4 +26,5 @@ const CategoryLink = ({ name, to, width, toggleNav, styles }) => {
 	);
 };
 
-export default CategoryLink;
+// export default CategoryLink;
+export default dynamic (() => Promise.resolve(CategoryLink), {ssr: false});

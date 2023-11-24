@@ -26,14 +26,14 @@ const BlogId = () => {
 						initial="offscreen"
 						whileInView="onscreen"
 						viewport={{ once: true, amount: 0 }}
-						className="flex pt-14 flex-col sm:flex-col lg:flex-col xl:flex-col gap-6 sm:gap-6 sm:pl-12 sm:pr-12 mx-auto items-center sm:pt-20 lg:w-[1100px]">
+						className="flex pt-14 flex-col sm:flex-col lg:flex-col xl:flex-col gap-6 sm:gap-6 sm:pl-12 sm:pr-12 mx-auto items-center sm:pt-20">
 						<HeaderSummary
 							containerBorder={`border-primary`}
 							textColor={`text-primary`}
 							dotBgColor={`bg-primary`}
 							summaryText={filteredBlog.date}
 						/>
-						<h1 className="text-primary font-bold text-3xl sm:text-5xl text-center">
+						<h1 className="text-primary font-bold text-3xl sm:text-5xl text-center max-w-3xl">
 							Top trends shaping the future of luxury Real Estate
 						</h1>
 					</motion.div>
