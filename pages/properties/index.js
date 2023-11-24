@@ -23,10 +23,10 @@ function Categories() {
 
                 {SearchFilters.map(filter => (
                   <motion.div 
-                  variants={fadeIn("up", 0.5, 0)}
-                  initial="offscreen"
-                  whileInView="onscreen"
-                  viewport={{ once: true, amount: 0 }}
+                    variants={fadeIn("up", 0.5, 0)}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0 }}
                     key={filter.id}   
                     className="col-span-1"
                   >
