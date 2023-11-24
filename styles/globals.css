@@ -209,10 +209,10 @@ body {
   display: none;
 }
 
-.review-cards .swiper {
+/* .review-cards .swiper {
   overflow: visible;
 }
-
+ */
 /* .review-cards .swiper {
   padding-bottom: 6rem;
 }
@@ -233,6 +233,6 @@ body {
   
 } */
 
-body{
+/* body{
   overflow-x: hidden;
-}
+} */
