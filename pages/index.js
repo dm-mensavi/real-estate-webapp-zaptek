@@ -315,15 +315,7 @@
                 >
                   <Swiper
                     breakpoints={breakpoints}
-                    spaceBetween={30}
-                    breakpoints={{
-                      760: {
-                        slidesPerView: 2,
-                      },
-                      1024: {
-                        slidesPerView: 3,
-                      },
-                    }}
+                    spaceBetween={20}
                     noSwiping
                     navigation= {true}				
                     loop={true}
