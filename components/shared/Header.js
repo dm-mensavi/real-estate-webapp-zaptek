@@ -5,9 +5,9 @@ import { motion } from "framer-motion"
 import { fadeIn } from "./Variant"
 
 
-const Header =({title, description, image, children, summaryText, cutout}) => {
+const   Header =({title, description, image, children, summaryText, cutout, styles}) => {
   return (
-    <div className={`bg-${image} ${image != 'home' && 'mt-16'} bg-cover bg-center text-center pt-[182px] pb-[154px] px-[5%] lg:pt-[180px] lg:pb-[220px] relative`}>
+    <div className={`bg-${image} ${image != 'home' && 'mt-16'} ${styles} bg-cover bg-center text-center pt-[182px] pb-[154px] px-[5%] lg:pt-[180px] lg:pb-[220px] relative`}>
   
       <div className={`z-30 relative ${image === 'home' ? 'flex flex-col items-start justify-start max-w-[550px] lg:left-20 -top-14' : ''}`}>
         <motion.div

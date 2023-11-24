@@ -27,7 +27,7 @@ function MobileCategoriesDropdown({toggle}) {
 			{/* Order by location column */}
 			<div className="flex flex-col space-y-3 mb-5">
 				<h5 className="text-primary  text-xl">by Location</h5>
-				<CategoryImage imageUrl={"Manhattan"} to={"manhattan"} text={"Manhattan, NY"} toggle={toggle}/>
+				<CategoryImage imageUrl={"Manhattan"} to={"manhattan"} text={"Manhattan, NY"} toggleNav={toggle}/>
 				<CategoryImage imageUrl={"London"} to={"london"} text={"London, UK"} toggleNav={toggle}/>
 				<CategoryImage imageUrl={"Miami"} to={"miami"} text={"Miami, FL"} toggleNav={toggle}/>
 			</div>

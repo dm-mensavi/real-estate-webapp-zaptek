@@ -123,6 +123,9 @@ body {
 .bg-blog {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/background-Images/blog-bg.jpg");
 }
+.bg-contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/background-Images/contact-bg.jpg");
+}
 
 .bg-homeCategory {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/background-Images/home-category.jpg"); 
