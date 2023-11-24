@@ -139,7 +139,7 @@
               </motion.div>
 
               <div className="section-body mt-[60px]">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-[25px]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[25px]">
                     {Categories.map(category => (
                       <motion.div
                         variants={fadeIn("up", 0.5, 0)}
@@ -292,6 +292,14 @@
                   <Swiper
                     slidesPerView={1}
                     spaceBetween={30}
+                    breakpoints={{
+                      760: {
+                        slidesPerView: 2,
+                      },
+                      1024: {
+                        slidesPerView: 3,
+                      },
+                    }}
                     noSwiping
                     navigation= {true}				
                     loop={false}
