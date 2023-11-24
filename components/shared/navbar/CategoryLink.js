@@ -1,17 +1,17 @@
 import { useState } from "react";
 import Link from "next/link";
 
-const CategoryLink = ({ name, to, width, toggleNav }) => {
+const CategoryLink = ({ name, to, width, toggleNav, styles }) => {
 	const [isHovered, setIsHovered] = useState(false);
 
 	return (
 		<div>
-			<Link href={`/guide/${to}`}  onClick={toggleNav}>
+			<Link href={`${to}`}  onClick={toggleNav}>
 				<div
 					className="relative group "
 					onMouseEnter={() => setIsHovered(true)}
 					onMouseLeave={() => setIsHovered(false)}>
-					<p className="text-xl nav-link lg:text-[17px] w-[180px]">{name}</p>
+					<p className={`text-xl nav-link lg:text-[17px] w-[180px] ${styles}`}>{name}</p>
 					<p
 						className={`w-[${width}}px] mt-1 relative bg-primarylight/40 h-[3px] overflow-hidden group`}>
 						<div

@@ -40,20 +40,20 @@ const CategoriesDropdown = () => {
 				<h5 className="text-primary">Get started</h5>
 
 				<div className="w-[45px]">
-					<CategoryLink name={"Legal"} to={""} width={50} />
+					<CategoryLink name={"Legal"} to={"/guide/"} width={50} />
 				</div>
 				<div className="w-[100px]">
-					<CategoryLink name={"Style Guide"} to={"styleguide"} width={50} />
+					<CategoryLink name={"Style Guide"} to={"/guide/styleguide"} width={50} />
 				</div>
 				<div className="w-[140px]">
 					<CategoryLink
 						name={"Image Licensing"}
-						to={"imagelicensing"}
+						to={"/guide/imagelicensing"}
 						width={50}
 					/>
 				</div>
 				<div className="w-[100px]">
-					<CategoryLink name={"Changelog"} to={"changelog"} width={50} />
+					<CategoryLink name={"Changelog"} to={"/guide/changelog"} width={50} />
 				</div>
 			</div>
 		</div>

@@ -2,26 +2,32 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { Blogdata } from "../../data/Blogdata";
+import MoreBlogs from "../../components/blogsCompo/MoreBlogs";
+import HeaderSummary from "../../components/shared/HeaderSummary";
+import CategoryLink from "../../components/shared/navbar/CategoryLink";
 
 const BlogId = () => {
 	const router = useRouter();
 	const blockId = router.query.blogDetail;
 	const id = parseInt(blockId);
 
+	const filteredBlog = Blogdata.find((blog) => blog.id === id);
+
 	return (
-		<div className="mt-10">
+		<div className="mt-20">
 			<div className="general-margin">
-				<div className="flex pt-14 flex-col sm:flex-col lg:flex-col xl:flex-col gap-6 sm:gap-6 sm:pl-32 sm:pr-32 mx-auto items-center sm:pt-20 lg:w-[1100px]">
-					<button className="h-10 w-40 border-2 rounded-3xl border-primary">
-						<ul className="list-disc">
-							<li className=" text-primary">January 10, 2023</li>
-						</ul>
-					</button>
-					<h1 className="text-primary font-bold text-3xl sm:text-5xl text-center pl-2 pr-2">
+				<div className="flex pt-14 flex-col sm:flex-col lg:flex-col xl:flex-col gap-6 sm:gap-6 sm:pl-12 sm:pr-12 mx-auto items-center sm:pt-20 lg:w-[1100px]">
+				<HeaderSummary
+						containerBorder={`border-primary`}
+						textColor={`text-primary`}
+						dotBgColor={`bg-primary`}
+						summaryText={filteredBlog.date}
+					/>
+					<h1 className="text-primary font-bold text-3xl sm:text-5xl text-center">
 						Top trends shaping the future of luxury Real Estate
 					</h1>
 				</div>
-				<div className="pt-20 md:px-56">
+				<div className="pt-20">
 					<Image
 						src={`/blog-${id}.jpg`}
 						alt=""
@@ -73,51 +79,27 @@ const BlogId = () => {
 						rich text field to any collection and then connect a rich text
 						element to that field in the settings panel. Voila!
 					</p>
-					<div className="pt-8 pb-20">
-						<button className="text-primary border-b-2 border-[#BAE7D4]">
-							Back to Blog
-						</button>
+					<div className="pt-10 pb-32 w-[110px]">
+						<CategoryLink
+							to={`/blog`}
+							name={"Back to Blog"}
+							styles={"text-primary text-[1.1rem] -mb-1"}
+						/>
 					</div>
 				</div>
 			</div>
-			<div className="flex flex-col gap-6 bg-gray-100 pb-36 general-margin">
-				<div className="pt-40 flex  items-center flex-col">
-					<button className="h-10 w-40 border-2 rounded-3xl border-primary">
-						<ul className="list-disc">
-							<li className=" text-primary">From Blog</li>
-						</ul>
-					</button>
-					<h1 className="pt-4 text-center">Realted posts</h1>
+			<div className="flex flex-col gap-6 bg-gray-100 pb-20 general-margin">
+				<div className="pt-32 -mb-10 flex  items-center flex-col">
+					<HeaderSummary
+						containerBorder={`border-primary`}
+						textColor={`text-primary`}
+						dotBgColor={`bg-primary`}
+						summaryText={"From Blog"}
+					/>
+					<h1 className="font-bold text-center">Realted posts</h1>
 				</div>
-				<div className="flex flex-col sm:grid-cols-2 sm:grid lg:flex lg:flex-row gap-6 pt-16">
-					{Blogdata.map((blogs) => (
-						<div key={blogs.id}>
-							<Link href={`/blog/${blogs.id}`}>
-								<Image
-									src={blogs.image}
-									width={1500}
-									height={1000}
-									alt="imag"
-									className="rounded-lg"
-								/>
-							</Link>
-							<div className="pt-8">
-								<button className="h-10 w-40 border-2 rounded-3xl border-primary">
-									<ul className="list-disc">
-										<li className=" text-primary">{blogs.date} </li>
-									</ul>
-								</button>
-							</div>
-							<div>
-								<h3 className="text-black pt-8">{blogs.title} </h3>
-							</div>
-							<div className="pt-12">
-								<button className="text-primary border-b-2 border-[#BAE7D4]">
-									Read More
-								</button>
-							</div>
-						</div>
-					))}
+				<div className="">
+					<MoreBlogs />
 				</div>
 			</div>
 		</div>
