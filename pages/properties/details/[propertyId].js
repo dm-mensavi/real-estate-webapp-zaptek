@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Gallery from "../../../components/PropertiesDetails/Gallery";
 import AllProperties from "../../../components/PropertiesDetails/AllProperties";
-import arrow from '../../../public/650adcad05bc07eb4bae8dbf_arrow.svg'
+import arrow from "../../../public/650adcad05bc07eb4bae8dbf_arrow.svg";
 import Link from "next/link";
 // import SwiperComponent from '../../../components/PropertiesDetails/SwiperComponent'
 import { LiaBedSolid } from "react-icons/lia";
@@ -22,6 +22,7 @@ import { Properties } from "../../../data/Propertiesdata";
 
 import { FiWifi } from "react-icons/fi";
 import Header from "../../../components/shared/Header";
+import Nopage from "../../../components/shared/Nopage";
 
 function PropertyDetail() {
 	const router = useRouter();
@@ -40,20 +41,14 @@ function PropertyDetail() {
 					description={description}
 					image={`listing-${id}`}
 					cutout>
-          <Link href={`/postproperty`}>
-            <button className="btn-primary rounded-md mt-[60px] flex mx-auto gap-3 group">
-              Request info
-
-              <figure className="w-[13px] group-hover:translate-x-[2px] group-hover:-translate-y-[2px] transition-all">
-                <Image 
-                  src={arrow}
-                  alt="arrow"
-                  className="block w-full"
-                />
-              </figure>
-            </button>
-          </Link>
-					
+					<Link href={`/postproperty`}>
+						<button className="btn-primary rounded-md mt-[60px] flex mx-auto gap-3 group">
+							Request info
+							<figure className="w-[13px] group-hover:translate-x-[2px] group-hover:-translate-y-[2px] transition-all">
+								<Image src={arrow} alt="arrow" className="block w-full" />
+							</figure>
+						</button>
+					</Link>
 				</Header>
 				<div className="general-margin mt-20">
 					<div className="grid grid-cols-2 gap-5">
@@ -237,7 +232,11 @@ function PropertyDetail() {
 			</>
 		);
 	} else {
-		return <div className="mt-20">No property found with ID {id}</div>;
+		return (
+			<>
+				<Nopage />
+			</>
+		);
 	}
 }
 
