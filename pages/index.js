@@ -52,7 +52,7 @@
           </Link>
         </Header>
 
-        <main className='font-semibold overflow-x-visible'>
+        <main className='font-semibold overflow-x-hidden'>
 
           <section className="px-[5%] py-[30px] ">
             <div className="section-content max-w-[1200px] mx-auto">
