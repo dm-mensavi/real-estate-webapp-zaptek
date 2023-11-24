@@ -270,10 +270,10 @@
                     
                     <div className="absolute w-[0] h-[0] group-hover:w-[90%] group-hover:h-[90%] bg-white transition-all duration-300 rounded-[50%]"></div>
 
-                    <div className="text-[70px] lg:text-[108px] xl2:text-[120px] mb-[15px] lg:mb-[30px] group-hover:text-primarylight transition-all duration-300 z-50">
+                    <div className="text-[70px] lg:text-[108px] xl2:text-[120px] mb-[15px] lg:mb-[30px] group-hover:text-primarylight transition-all duration-300 z-30">
                       $3.7B
                     </div>
-                    <p className="text-white sm:text-[20px] mb-[10px] lg:mb-[20px] group-hover:text-primarylight transition-all duration-300 z-50">
+                    <p className="text-white sm:text-[20px] mb-[10px] lg:mb-[20px] group-hover:text-primarylight transition-all duration-300 z-30">
                       Managed Properties
                     </p>
                   </motion.div>

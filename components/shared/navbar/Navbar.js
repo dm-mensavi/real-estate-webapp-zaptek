@@ -88,7 +88,7 @@ const Navbar = () => {
 
 
 			{/* Close/Open icon */}
-			<div className="lg:hidden relative z-30">
+			<div className="lg:hidden relative z-50">
 				<button onClick={toggleMenu}>
 					{isMenuOpen ? (
 						<HiX	

@@ -5,7 +5,7 @@ import dynamic from "next/dynamic"
 
 function MobileCategoriesDropdown({toggle}) {
   return (
-    <div className="flex flex-col sm:flex-row  pt-5 h-[100%] sm:h-[400px] w-[85vw] justify-between bg-white">
+    <div className="flex flex-col sm:flex-row  pt-5 h-[100%] sm:h-[400px] w-[75vw] justify-between bg-white">
 			
 			{/* Order by category column */}
 			<div className="flex flex-col space-y-4 mb-5 -mr-14">
