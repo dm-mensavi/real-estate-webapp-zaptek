@@ -213,14 +213,14 @@ body {
   overflow: visible;
 }
 
-/* .review-cards .swiper {
-  padding-bottom: 6rem;
-}
-
 @media screen and (max-width: 767px) {
   .review-cards .swiper-button-next,
   .review-cards .swiper-button-prev {
-    top: 83%;
+    top: 84%;
+  }
+
+  .review-cards .swiper {
+    padding-bottom: 6rem;
   }
 
   .review-cards .swiper-button-next {
@@ -231,7 +231,7 @@ body {
   }
 
   
-} */
+}
 
 /* body{
   overflow-x: hidden;
