@@ -191,13 +191,21 @@ body {
 
 .review-cards .swiper-button-next,
 .review-cards .swiper-button-prev {
-  background-color: #00693d;
+  background-color: #04bd70;
   width: 77px;
   height: 77px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 1400px) {
+.review-cards .swiper-button-next {
+  left: 93%;
+}
+.review-cards .swiper-button-prev {
+  left: -0%;
+}
 }
 
 .review-cards .swiper-button-next:after,
@@ -227,10 +235,10 @@ body {
   }
 
   .review-cards .swiper-button-next {
-    left: 100px;
+    left: 60%;
   }
   .review-cards .swiper-button-prev {
-    right: 100px;
+    left: 20%;
   }
 
   

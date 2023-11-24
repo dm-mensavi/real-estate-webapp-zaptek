@@ -27,6 +27,29 @@
   import 'swiper/css/scrollbar';
 
   export default function Home() {
+    const breakpoints = {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      // when window width is >= 1024px
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    };
+
     return (
       <div className=''>
         {/* <HomeHeader /> */}
@@ -288,21 +311,21 @@
                   initial="offscreen"
                   whileInView="onscreen"
                   viewport={{ once: true, amount: 0 }}
-                  className="review-cards"
+                  className="review-cards overflow-hidden"
                 >
                   <Swiper
-                    slidesPerView={1}
+                    breakpoints={breakpoints}
                     spaceBetween={30}
                     noSwiping
                     navigation= {true}				
-                    loop={false}
+                    loop={true}
                     modules={[Navigation]}
                     className="swiper-no-swiping"
                   >
                    {
                       Reviews.map((review, index) => (
                         <SwiperSlide
-                          className={`${index} mr-[30px] max-w-[390px]`}
+                          className={`${index}`}
                           key={review.id}
                         >
                           <ReviewCard review={review}/>
