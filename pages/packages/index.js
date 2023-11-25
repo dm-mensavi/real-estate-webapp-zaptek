@@ -1,5 +1,7 @@
 import PackageCards from "../../components/packages/PackageCard";
 import HeaderSummary from "../../components/shared/HeaderSummary";
+import FAQ from "../../components/FAQ/FAQ";
+import { faqdata } from "../../data/faqdata";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../components/shared/Variant";
 
@@ -32,6 +34,36 @@ function Packages() {
 			<div>
 				<PackageCards />
 			</div>
+
+			{/* FAQ section */}
+				{/* FAQ */}
+				<motion.div 
+					variants={fadeIn("up", 0.5, 0)}
+					initial="offscreen"
+					whileInView="onscreen"
+					viewport={{ once: true, amount: 0 }}
+				
+				className="flex flex-col justify-center items-center mt-20 mb-10">
+					<HeaderSummary
+						containerBorder="border-primary"
+						textColor="text-primary"
+						dotBgColor="bg-primary"
+						summaryText="FAQ"
+					/>
+					<h1 className="">Frequently asked questions</h1>
+				</motion.div>
+				<motion.div
+					variants={fadeIn("up", 0.5, 0)}
+					initial="offscreen"
+					whileInView="onscreen"
+					viewport={{ once: true, amount: 0 }}
+					className="grid sm:grid-cols-1">
+					{faqdata.map((faq, index) => {
+						return (
+							<FAQ key={index} question={faq.questions} answer={faq.answers} />
+						);
+					})}
+				</motion.div>
 		</div>
 	);
 }

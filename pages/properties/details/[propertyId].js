@@ -19,10 +19,18 @@ import { RiParkingBoxLine } from "react-icons/ri";
 import { CiForkAndKnife } from "react-icons/ci";
 import { useRouter } from "next/router";
 import { Properties } from "../../../data/Propertiesdata";
+import { featuredProperties } from "../../../data/FeaturedProperties.js"
 
 import { FiWifi } from "react-icons/fi";
 import Header from "../../../components/shared/Header";
 import Nopage from "../../../components/shared/Nopage";
+
+import HeaderSummary from "../../../components/shared/HeaderSummary";
+import list2 from "../../../public/listing-2.jpg";
+import list3 from "../../../public/listing-3.jpg";
+import list4 from "../../../public/listing-4.jpg";
+import list5 from "../../../public/listing-5.jpg";
+// import SwiperComponent from '../../../components/PropertiesDetails/SwiperComponent'
 
 function PropertyDetail() {
 	const router = useRouter();
@@ -51,7 +59,7 @@ function PropertyDetail() {
 					</Link>
 				</Header>
 				<div className="general-margin mt-20">
-					<div className="grid grid-cols-2 gap-5">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 						<Gallery id={"1"} />
 						<Gallery id={"2"} />
 						<Gallery id={"3"} />
@@ -59,13 +67,15 @@ function PropertyDetail() {
 					</div>
 
 					{/* properties details */}
-					<div className="flex lg:flex-row md:flex-col sm:flex-col justify-start items-center gap-10">
+					<div className="flex flex-col lg:flex-row justify-start items-center gap-10">
 						<div className="lg:w-[60%] md:w-[100%] sm:w-[100%]">
 							<div className="">
-								<p className="border-2 border-primary rounded-2xl p-1 text-primary w-fit">
-									<span className="w-50 h-50 rounded-lg bg-primary" />
-									Properties Details
-								</p>
+								<HeaderSummary
+									containerBorder="border-primary"
+									textColor="text-primary"
+									dotBgColor="bg-primary"
+									summaryText="Property details"
+								/>
 							</div>
 
 							<div className="text-red-500 flex justify-between items-center lg:w-[80%] md:w-[80%] sm:w-full my-8">
@@ -124,7 +134,14 @@ function PropertyDetail() {
 									</p>
 								</div>
 								<hr className="my-12" />
-
+								<div>
+									<HeaderSummary
+										containerBorder="border-primary"
+										textColor="text-primary"
+										dotBgColor="bg-primary"
+										summaryText="Property amenities"
+									/>
+								</div>
 								<div className="grid grid-cols-3 gap-y-[10%]">
 									<div className="text-primary flex justify-start items-center gap-3">
 										<PiTree size={30} />
@@ -166,7 +183,8 @@ function PropertyDetail() {
 							</div>
 						</div>
 
-						<div className="lg:w-[30%] md:w-full sm:w-full border p-5">
+						{/* Pricing Card */}
+						<div className="lg:w-[35%] md:w-full sm:w-full border p-8 rounded-md shadow-md">
 							<div className="p-x-5">
 								<div>
 									<p className="bg-red-500 text-white p-2 rounded-lg w-fit my-4">
@@ -201,7 +219,7 @@ function PropertyDetail() {
 											placeholder="+1 345-678"
 										/>{" "}
 										<br /> <br />
-										<button className="justify-center border w-full text-center py-4 rounded hover:bg-primary hover:text-white animate">
+										<button className="justify-center border w-full text-center py-4 btn-secondary">
 											Get in Touch
 										</button>
 									</form>
@@ -211,21 +229,30 @@ function PropertyDetail() {
 					</div>
 
 					{/* Browse all properties */}
-					<div>
-						<div className="">
-							<p className="border-2 border-primary rounded-2xl p-1 text-primary w-fit">
-								<span className="w-50 h-50 rounded-lg bg-primary" />
-								Related Property
-							</p>
+					<div className="mt-32">
+						<div className="grid lg:grid-cols-2 md:grid-cols-1 sm-max:grid-cols-1 gap-5">
+							{featuredProperties.map((property, index) => (
+								<AllProperties
+									key={index}
+									id={property.id}
+									propertyImage={property.propertyImage}
+									bed={property.bed}
+									status={property.status}
+									price={property.price}
+									name={property.name}
+									location={property.location}
+									bath={property.bath}
+									sqft={property.sqft}
+									featured={property.featured}
+								/>
+							))}
 						</div>
-						<h1>Browse all properties</h1>
 
-						<div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-5">
-							<AllProperties />
-							<AllProperties />
-							<AllProperties />
-							<AllProperties />
-						</div>
+						<Link
+							href={"/properties"}
+							className="btn-secondary mx-auto w-fit flex justify-center mt-20 mb-44 ">
+							Browse all proterties
+						</Link>
 					</div>
 					{/* <SwiperComponent /> */}
 				</div>

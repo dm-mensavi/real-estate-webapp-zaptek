@@ -3,6 +3,7 @@ import AllProperties from "../../components/PropertiesDetails/AllProperties"
 import HeaderSummary from '../shared/HeaderSummary'
 import { motion } from "framer-motion"
 import { fadeIn } from "../../components/shared/Variant"
+import { featuredProperties } from "../../data/FeaturedProperties"
 import Link from 'next/link'
 
 function LatestPropertiesSection() {
@@ -32,10 +33,21 @@ function LatestPropertiesSection() {
 
               <div className="section-body mt-[60px]">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                  <AllProperties />
-                  <AllProperties />
-                  <AllProperties />
-                  <AllProperties />
+                {featuredProperties.map((property, index) => (
+								<AllProperties
+									key={index}
+									id={property.id}
+									propertyImage={property.propertyImage}
+									bed={property.bed}
+									status={property.status}
+									price={property.price}
+									name={property.name}
+									location={property.location}
+									bath={property.bath}
+									sqft={property.sqft}
+									featured={property.featured}
+								/>
+							))}
                 </div>
                 
                 <Link href={`/properties`}>

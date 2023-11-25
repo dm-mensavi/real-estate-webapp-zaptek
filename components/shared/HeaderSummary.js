@@ -12,4 +12,4 @@ const HeaderSummary = (props) => {
     )
 }
 
-export default HeaderSummary
+export default HeaderSummary;

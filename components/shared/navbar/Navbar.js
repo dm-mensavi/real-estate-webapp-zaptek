@@ -22,7 +22,7 @@ const Navbar = () => {
 
 	return (
 		<>
-		<nav className="fixed top-0 left-0 right-0 h-20 bg-white p-4 flex items-center justify-between z-50 px-4	sm:px-10 lg:px-20 xl:px-28 2xl:px-[10%]">
+		<nav className="fixed top-0 left-0 right-0 h-20 bg-white p-4 flex items-center justify-between z-50 px-4	sm:px-10 lg:px-20 xl:px-28 2xl:px-[10%] ">
 			<div className="flex items-center justify-start space-x-5 ">
 				<Logo />
 

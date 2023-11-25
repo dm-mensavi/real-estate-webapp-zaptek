@@ -37,20 +37,20 @@ function MobileCategoriesDropdown({toggle}) {
 				<h5 className="text-primary text-xl">Get started</h5>
 
 				<div className="w-[45px] text-xl">
-					<CategoryLink name={"Legal"} to={""} width={50}  toggleNav={toggle}/>
+					<CategoryLink name={"Legal"} to={"/404"} width={50}  toggleNav={toggle}/>
 				</div>
 				<div className="w-[100px] text-xl">
-					<CategoryLink name={"Style Guide"} to={"styleguide"} width={50}  toggleNav={toggle}/>
+					<CategoryLink name={"Style Guide"} to={"/404"} width={50}  toggleNav={toggle}/>
 				</div>
 				<div className="w-[140px] text-xl">
 					<CategoryLink
 						name={"Image Licensing"}
-						to={"imagelicensing"}
+						to={"/404"}
 						width={50} toggleNav={toggle}
 					/>
 				</div>
 				<div className="w-[100px]">
-					<CategoryLink name={"Changelog"} to={"changelog"} width={50}  toggleNav={toggle}/>
+					<CategoryLink name={"Changelog"} to={"/404"} width={50}  toggleNav={toggle}/>
 				</div>
 			</div>
 		</div>
