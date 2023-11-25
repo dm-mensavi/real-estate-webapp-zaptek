@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Gallery from "../../../components/PropertiesDetails/Gallery";
 import AllProperties from "../../../components/PropertiesDetails/AllProperties";
+import HeaderSummary from "../../../components/shared/HeaderSummary";
+import { propertydata } from "../../../data/propertydata";
+import list2 from "../../../public/listing-2.jpg";
+import list3 from "../../../public/listing-3.jpg";
+import list4 from "../../../public/listing-4.jpg";
+import list5 from "../../../public/listing-5.jpg";
 // import SwiperComponent from '../../../components/PropertiesDetails/SwiperComponent'
 import { LiaBedSolid } from "react-icons/lia";
 import {
@@ -52,10 +58,12 @@ function PropertyDetail() {
         <div className="flex lg:flex-row md:flex-col sm:flex-col justify-start items-center gap-10">
           <div className="lg:w-[60%] md:w-[100%] sm:w-[100%]">
             <div className="">
-              <p className="border-2 border-primary rounded-2xl p-1 text-primary w-fit">
-                <span className="w-50 h-50 rounded-lg bg-primary" />
-                Properties Details
-              </p>
+              <HeaderSummary
+                containerBorder="border-primary"
+                textColor="text-primary"
+                dotBgColor="bg-primary"
+                summaryText="Property details"
+              />
             </div>
 
             <div className="text-red-500 flex justify-between items-center lg:w-[80%] md:w-[80%] sm:w-full my-8">
@@ -114,7 +122,14 @@ function PropertyDetail() {
                 </p>
               </div>
               <hr className="my-12" />
-
+              <div>
+                <HeaderSummary
+                  containerBorder="border-primary"
+                  textColor="text-primary"
+                  dotBgColor="bg-primary"
+                  summaryText="Property amenities"
+                />
+              </div>
               <div className="grid grid-cols-3 gap-y-[10%]">
                 <div className="text-primary flex justify-start items-center gap-3">
                   <PiTree size={30} />
@@ -198,21 +213,72 @@ function PropertyDetail() {
         </div>
 
         {/* Browse all properties */}
-        <div>
-          <div className="">
-            <p className="border-2 border-primary rounded-2xl p-1 text-primary w-fit">
+        <div className="bg-slate-100  my-[10%] py-5">
+          <div>
+            {/* <p className="border-2 border-primary rounded-2xl p-1 text-primary w-fit">
               <span className="w-50 h-50 rounded-lg bg-primary" />
               Related Property
-            </p>
+            </p> */}
           </div>
-          <h1>Browse all properties</h1>
+          <div className="flex flex-col justify-center items-center pt-[10%]">
+            <HeaderSummary
+              containerBorder="border-primary"
+              textColor="text-primary"
+              dotBgColor="bg-primary"
+              summaryText="Related Property"
+            />
+            <h1>Browse all properties</h1>
+          </div>
 
           <div className="grid lg:grid-cols-2 md:grid-cols-1 sm-max:grid-cols-1 gap-5">
-            <AllProperties status="FOR SALE" />
-            <AllProperties status="FOR SALE" />
-            <AllProperties status="FOR RENT" />
-            <AllProperties status="FOR RENT" featured="FEATURED" />
+            <AllProperties
+              propertyImage={list2}
+              bed="4"
+              status="FOR RENT"
+              price="$10,000"
+              name="Charming Studio Apartment"
+              location="West City Corner"
+              bath="3"
+              sqft="450"
+            />
+
+            <AllProperties
+              propertyImage={list3}
+              bed="4"
+              status="FOR SALE"
+              price="$450,000"
+              name="Luxury Urban Loft"
+              location="8706 Herrick Aver"
+              bath="3"
+              sqft="450"
+            />
+
+            <AllProperties
+              propertyImage={list4}
+              bed="2"
+              status="FOR RENT"
+              price="$4,000"
+              name="Elegant Suburban Family Home"
+              location="8706 Herrick Aver"
+              bath="1"
+              sqft="450"
+              featured="FEATURED"
+            />
+
+            <AllProperties
+              propertyImage={list5}
+              bed="2"
+              status="FOR RENT"
+              price="$2,000"
+              name="Cozy Lakeside Cottage"
+              location="8706 Herrick Aver"
+              bath="1"
+              sqft="450"
+            />
           </div>
+          <button className=" mx-auto w-fit flex justify-center items-center border rounded my-10 p-3 hover:text-white hover:bg-primary">
+            Browse all proterties
+          </button>
         </div>
         {/* <SwiperComponent /> */}
       </div>

@@ -3,8 +3,20 @@ import { PiBathtubLight } from "react-icons/pi";
 import { CiLocationOn } from "react-icons/ci";
 import { IoBedOutline } from "react-icons/io5";
 import { BsXSquare } from "react-icons/bs";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
 
-const AllProperties = ({ status, featured }) => {
+const AllProperties = ({
+  status,
+  featured,
+  propertyImage,
+  price,
+  name,
+  location,
+  bed,
+  bath,
+  sqft,
+}) => {
   const checkstatus = (status) => {
     let color = "";
     switch (status) {
@@ -28,10 +40,17 @@ const AllProperties = ({ status, featured }) => {
     }
   };
   return (
-    <div className="relative overflow-hidden rounded-lg">
+    <motion.div
+      variants={fadeIn("up", 0.5, 0)}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0 }}
+      className="relative overflow-hidden rounded-lg"
+    >
       <Image
         className=" relative hover:scale-105 hover:transition hover:duration-300 hover:ease-in-out "
-        src="/gallery/gallery-3.jpg"
+        src={propertyImage}
+        // src="/gallery/gallery-3.jpg"
         width={1500}
         height={1000}
         alt="image"
@@ -54,7 +73,7 @@ const AllProperties = ({ status, featured }) => {
       </div>
       <div className="absolute flex justify-between items-center w-[100%] bottom-0 py-3 p-1 rounded-lg px-2 text-sm backdrop-blur-sm bg-white/30 ">
         <div>
-          <p className="text-white text-2xl">$4,000,000</p>
+          <p className="text-white text-2xl">{price}</p>
         </div>
         <div
           className="flex justify-evenly
@@ -62,15 +81,15 @@ const AllProperties = ({ status, featured }) => {
         >
           <div className="flex justify-center gap-1 items-center">
             <IoBedOutline size={30} className="text-primarylight" />
-            <p className="text-white">8 Beds</p>
+            <p className="text-white">{bed} Beds</p>
           </div>
           <div className="flex justify-center gap-1 items-center">
             <PiBathtubLight size={30} className="text-primarylight" />
-            <p className="text-white">2 Bath</p>
+            <p className="text-white">{bath} Bath</p>
           </div>
           <div className="flex justify-center gap-1 items-center">
             <BsXSquare size={25} className="text-primarylight" />
-            <p className="text-white">1 sqft</p>
+            <p className="text-white">{sqft} sqft</p>
           </div>
         </div>
       </div>
@@ -78,11 +97,11 @@ const AllProperties = ({ status, featured }) => {
         {" "}
         <div className="flex pl-5 gap-2 items-center justify-center">
           <CiLocationOn size={25} className="text-white" />
-          <p className="text-white ">Northridge Community</p>
+          <p className="text-white ">{location}</p>
         </div>
       </div>
-      <p className="absolute bottom-32 text-white pl-5">3-Bedroom Townhouse</p>
-    </div>
+      <p className="absolute bottom-32 text-white pl-5">{name}</p>
+    </motion.div>
   );
 };
 

@@ -1,18 +1,27 @@
+import { motion } from "framer-motion";
+import { fadeIn } from "../../variants";
 function Post() {
   return (
-    <div>
+    <motion.div
+      variants={fadeIn("up", 0.5, 0)}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0 }}
+      className="general-margin"
+    >
       <div className="my-[10%] flex justify-center items-center">
-        <form className="">
+        <form className="w-[60%]">
+          <p className="my-10 text-xl font-bold">Property information</p>
           <div>
             <label>Listing title</label>
             <input
               type="text"
               placeholder="Smart cities expo"
-              className="p-3 border border-slate-300 rounded my-3 w-full focus:outline-blue-500 outline-2"
+              className="p-3 border border-slate-300 rounded my-3  focus:outline-blue-500 outline-2 w-full"
             />
           </div>
           <div className="flex">
-            <div className="flex flex-col mr-5 ">
+            <div className="flex flex-col mr-5 w-full">
               <label>Property location</label>
               <input
                 type="text"
@@ -20,7 +29,7 @@ function Post() {
                 className="p-3 border border-slate-300 rounded my-3 w-full focus:outline-blue-500 outline-2"
               />
             </div>
-            <div className="flex flex-col ">
+            <div className="flex flex-col w-full ">
               <label>Property type</label>
               <input
                 type="text"
@@ -30,7 +39,7 @@ function Post() {
             </div>
           </div>
           <div className="flex w-full">
-            <div className="flex flex-col mr-5 ">
+            <div className="flex flex-col mr-5 w-full">
               <label>Property location</label>
               <input
                 type="text"
@@ -38,7 +47,7 @@ function Post() {
                 className="p-3 border border-slate-300 rounded my-3 w-full focus:outline-blue-500 outline-2"
               />
             </div>
-            <div className="flex flex-col ">
+            <div className="flex flex-col w-full ">
               <label>Land sqft.</label>
               <input
                 type="text"
@@ -68,7 +77,7 @@ function Post() {
           </div>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
