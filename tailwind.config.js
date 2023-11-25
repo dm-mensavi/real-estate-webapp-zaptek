@@ -30,6 +30,8 @@ module.exports = {
 				'customC': '0 2px 7px rgba(0, 0, 0, .04);',
 			},
 			screens: {
+				'custom-sm': '485px',
+				'custom-lg': '991px',
 				'xl2': '1300px',
 			},
 		},

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -8,6 +7,7 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import Underline from "./Underline";
 import CategoriesDropdown from "./CategoriesDropdown.js";
 import MobileNav from "./MobileNav.js";
+import Logo from "./Logo.js";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,11 +24,7 @@ const Navbar = () => {
 		<>
 		<nav className="fixed top-0 left-0 right-0 h-20 bg-white p-4 flex items-center justify-between z-50 px-4	sm:px-10 lg:px-20 xl:px-28 2xl:px-[10%]">
 			<div className="flex items-center justify-start space-x-5 ">
-				<Link href="/">
-					<div className="mr-4 cursor-pointer relative z-10">
-						<Image src="/icons/logo.png" width={120} height={120} alt="Logo" />
-					</div>
-				</Link>
+				<Logo />
 
 				{/* Hidden component on mobile */}
 				<div className="hidden lg:flex items-center justify-start space-x-5">
