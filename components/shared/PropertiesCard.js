@@ -19,7 +19,7 @@ const PropertiesCard = (props) => {
             <div className="card-content">
                 {
                     props.property.id >= 5 &&
-                    <span className="absolute top-[5%] left-[5%] z-50">
+                    <span className="absolute top-[5%] left-[5%] z-30">
                         <p className={`inline px-3 py-[7px] rounded-md text-[12px] text-[#26272b] bg-white`}>
                             FEATURED
                         </p>
