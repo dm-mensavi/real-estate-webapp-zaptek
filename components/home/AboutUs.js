@@ -45,7 +45,7 @@ function AboutUs() {
                     initial="offscreen"
                     whileInView="onscreen"
                     viewport={{ once: true, amount: 0.2 }}
-                    className="text-center text-white w-[290px] h-[290px] sm:w-[450px] sm:h-[450px] lg:w-[550px] lg:h-[550px] border-[3px] border-white rounded-[50%] flex justify-center items-center flex-col mr-auto relative group"
+                    className="text-center text-white w-[290px] h-[290px] sm:w-[450px] sm:h-[450px] lg:w-[550px] lg:h-[550px] border-[3px] border-white rounded-[50%] flex justify-center items-center flex-col mx-auto relative group"
                   >
                     
                     <div className="absolute w-[0] h-[0] group-hover:w-[90%] group-hover:h-[90%] bg-white transition-all duration-300 rounded-[50%]"></div>
