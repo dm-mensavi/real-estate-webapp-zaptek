@@ -29,9 +29,9 @@ function Post() {
 								className="p-3 border border-slate-300 rounded my-3  focus:outline-blue-300 outline-2 w-full"
 							/>
 						</div>
-						<div className="flex">
+						<div className="flex flex-col md:flex-row">
 							<div className="flex flex-col mr-5 w-full">
-								<label>Property location<span className="text-red-500">*</span></label>
+								<label>Property category<span className="text-red-500">*</span></label>
 								<input
 									type="text"
 									placeholder="Apartment, Villa, Office"
@@ -47,7 +47,7 @@ function Post() {
 								/>
 							</div>
 						</div>
-						<div className="flex w-full">
+						<div className="flex flex-col md:flex-row">
 							<div className="flex flex-col mr-5 w-full">
 								<label>Property location<span className="text-red-500">*</span></label>
 								<input

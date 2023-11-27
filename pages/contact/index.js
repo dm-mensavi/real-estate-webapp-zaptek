@@ -20,7 +20,7 @@ function Contact() {
 				className="general-margin my-20">
 				<div className=" flex justify-center items-center">
 					<form className="w-[70%] font-semibold">
-						<div className="flex">
+						<div className="flex flex-col md:flex-row">
 							<div className="flex flex-col mr-5 w-full">
 								<label>Name</label>
 								<input
@@ -38,7 +38,7 @@ function Contact() {
 								/>
 							</div>
 						</div>
-						<div className="flex w-full">
+						<div className="flex flex-col md:flex-row">
 							<div className="flex flex-col mr-5 w-full">
 								<label>Phone</label>
 								<input
