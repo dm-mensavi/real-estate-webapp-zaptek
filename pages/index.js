@@ -14,7 +14,7 @@
         {/* <HomeHeader /> */}
         <HomeHero />
 
-        <main className='font-semibold overflow-x-hidden'>
+        <main className='font-semibold'>
           <FilterSection />
           <PopularRealEstateSection />
           <SearchCaregory />
