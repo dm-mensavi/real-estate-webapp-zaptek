@@ -24,7 +24,7 @@ function AboutUs() {
                   Uncover exceptional properties at value prices only here.
                   </h2>
                   
-                  <Link href={`/post-a-event`}>
+                  <Link href={`/postproperty`}>
                     <button className="btn-secondary hover:bg-white hover:text-black font-bold rounded-md mt-[60px] flex justify-center items-center gap-3 group">
                       Post a property
 

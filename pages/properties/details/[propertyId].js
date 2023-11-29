@@ -30,6 +30,7 @@ import list2 from "../../../public/listing-2.jpg";
 import list3 from "../../../public/listing-3.jpg";
 import list4 from "../../../public/listing-4.jpg";
 import list5 from "../../../public/listing-5.jpg";
+import PictureGallery from "../../../components/PropertiesDetails/PictureGallery.js";
 // import SwiperComponent from '../../../components/PropertiesDetails/SwiperComponent'
 
 function PropertyDetail() {
@@ -59,13 +60,10 @@ function PropertyDetail() {
 					</Link>
 				</Header>
 				<div className="general-margin mt-20">
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-						<Gallery id={"1"} />
-						<Gallery id={"2"} />
-						<Gallery id={"3"} />
-						<Gallery id={"4"} />
-					</div>
-
+				{/* Gallery */}
+				<div className="my-20 mx-3 md:mx-10 rounded-md">
+					<PictureGallery />
+				</div>
 					{/* properties details */}
 					<div className="flex flex-col lg:flex-row justify-start items-center gap-10">
 						<div className="lg:w-[60%] md:w-[100%] sm:w-[100%]">
