@@ -76,7 +76,7 @@ const Footer = () => {
                     target='_blank'
                   >
                     <Image 
-                    src={'/icons/linkedin-icon.png'}
+                    src={'/icons/linkedIn-icon.png'}
                     alt="linkedin icon"
                     className="block w-full"
                     width={100}
