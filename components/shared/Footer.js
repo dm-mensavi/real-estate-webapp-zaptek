@@ -85,18 +85,6 @@ const Footer = () => {
                   </Link>
                 </figure>
               </div>
-
-              <p className="mt-[15px] text-[15px]">
-                &copy; This is a&nbsp;
-                <Link href={'https://www.flowmance.com/'} target="_blank" className="underline">
-                  Flowmance
-                </Link> 
-                &nbsp;template powered by&nbsp;
-                <Link href={'https://webflow.com/'} target="_blank" className="underline">
-                  Webflow
-                </Link>
-
-              </p>
             </div>
           </div>
         </div>
